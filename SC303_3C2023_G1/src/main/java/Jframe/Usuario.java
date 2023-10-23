@@ -1,11 +1,13 @@
 package Jframe;
 
+
+
 public class Usuario {
-   private String nombre;
-   private String apellidos;
-   private String nickname;
-   private String password;
-   private boolean estado; // true es activo | false es inactivo
+   protected String nombre;
+   protected String apellidos;
+   protected String nickname;
+   protected String password;
+   protected boolean estado; // true es activo | false es inactivo
 
     public Usuario(String nombre, String apellidos, String nickname, String password) {
         this.nombre = nombre;
@@ -14,6 +16,7 @@ public class Usuario {
         this.password = password;
         this.estado = true;
     }
+
 
     public String getNombre() {
         return nombre;
