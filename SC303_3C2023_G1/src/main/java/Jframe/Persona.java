@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 package Jframe;
 
@@ -62,3 +63,4 @@ public class Persona {
 }// fin de la clase
     
 
+=======
