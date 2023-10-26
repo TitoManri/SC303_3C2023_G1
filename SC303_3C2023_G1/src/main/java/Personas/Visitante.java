@@ -1,6 +1,6 @@
 
 
-package Jframe;
+package Personas;
 
 public class Visitante extends Persona{
     

@@ -1,18 +1,20 @@
-package Jframe;
 
+package Personas;
 
+public class Persona {
+    private String nombre;
+   private String apellidos;
+   private String nickname;
+   private String password;
+   private boolean estado; // true es activo | false es inactivo
 
-public class Usuario {
-   protected String nombre;
-   protected String apellidos;
-   protected String nickname;
-   protected String password;
-   protected boolean estado; // true es activo | false es inactivo
-
-
-    public Usuario(String nombre, String apellidos, String nickname, String password) {
+    public Persona(String nombre, String apellidos, String nickname, String password) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.nickname = nickname;
+        this.password = password;
+        this.estado = true;
     }
-
 
     public String getNombre() {
         return nombre;
@@ -57,5 +59,4 @@ public class Usuario {
     public void inactivarUsuario(){
         this.estado = false;
     }
-
 }

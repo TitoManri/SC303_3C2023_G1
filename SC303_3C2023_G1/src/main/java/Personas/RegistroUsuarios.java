@@ -1,5 +1,6 @@
-package Jframe;
+package Personas;
 
+import Personas.Usuario;
 import java.util.LinkedList;
 
 public class RegistroUsuarios {
@@ -43,11 +44,8 @@ public class RegistroUsuarios {
     //Método para mostrar los usuarios
     public String mostrarUsuarios() {
         StringBuilder sb = new StringBuilder();
-        for (Usuario usuario : listaUsuarios) {
-            sb.append(usuario.getNickname())
-                    .append(" (")
-                    .append(usuario.estaActivo() ? "Activo" : "Inactivo")
-                    .append(")\n");
+        for (Usuario usuario : listaUsuarios) { 
+            sb.append(usuario.getNickname()).append(" (").append(usuario.estaActivo() ? "Activo" : "Inactivo").append(")\n");
         }
         return sb.toString();
     }

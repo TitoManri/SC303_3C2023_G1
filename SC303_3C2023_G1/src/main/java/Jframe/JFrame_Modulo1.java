@@ -1,5 +1,8 @@
 package Jframe;
 
+import Personas.RegistroUsuarios;
+import Personas.Usuario;
+
 
 public class JFrame_Modulo1 extends javax.swing.JFrame {
 
