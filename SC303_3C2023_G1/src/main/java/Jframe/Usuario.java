@@ -1,8 +1,5 @@
 package Jframe;
 
-<<<<<<< HEAD
-public class Usuario extends Persona{
-=======
 
 
 public class Usuario {
@@ -11,14 +8,11 @@ public class Usuario {
    protected String nickname;
    protected String password;
    protected boolean estado; // true es activo | false es inactivo
->>>>>>> Modulo1
+
 
     public Usuario(String nombre, String apellidos, String nickname, String password) {
-        super(nombre, apellidos, nickname, password);
     }
 
-<<<<<<< HEAD
-=======
 
     public String getNombre() {
         return nombre;
@@ -63,7 +57,5 @@ public class Usuario {
     public void inactivarUsuario(){
         this.estado = false;
     }
-   
-   
->>>>>>> Modulo1
+
 }

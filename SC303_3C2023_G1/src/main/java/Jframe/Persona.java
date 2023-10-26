@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 package Jframe;
 
@@ -60,7 +59,4 @@ public class Persona {
     public void inactivarUsuario(){
         this.estado = false;
     }
-}// fin de la clase
-    
-
-=======
+}
