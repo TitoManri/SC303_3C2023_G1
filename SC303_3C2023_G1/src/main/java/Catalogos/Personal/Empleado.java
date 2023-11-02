@@ -32,6 +32,7 @@ public class Empleado{
         this.telefono = "";
         this.email = "";
         this.numeroEditar = 0;
+        this.listaEmpleados = new ArrayList<>();
     }
 
     public Empleado(String nombre, String apellidos, String cuidad, String dirrecion, String telefono, String email) {
@@ -120,9 +121,15 @@ public class Empleado{
         
     }
     
-    public void buscarUsuario(){
-        
+    public Empleado buscarEmpleado(String nombre, String email) {
+        for (Empleado empleado : listaEmpleados) {
+            if (nombre.equals(empleado.getNombre()) && email.equals(empleado.getEmail())) {
+                return empleado;
+            }
+        }
+        return null; 
     }
+
     
     public void editarEmpleado(){
         
@@ -165,16 +172,15 @@ public class Empleado{
         
     }
     
-    public void inactivarEmpleado(){
-    
-        String nombreEmpleadoTemporal = JOptionPane.showInputDialog("Digite el nombre de empleado que quiere editar: ");
-        String emailEmpleadoTemporal = JOptionPane.showInputDialog("Digite el correo electronico del empleado que quiere editar: ");
-        for(Empleado empleado : listaEmpleados) {
-            if (nombreEmpleadoTemporal.equals(empleado.getNombre()) && emailEmpleadoTemporal.equals(empleado.getEmail())) {
-                empleado.setEstado(false);
+        public void inactivarEmpleado(String nombre, String email) {
+        Empleado empleado = buscarEmpleado(nombre, email);
+
+        if (empleado != null) {
+            empleado.setEstado(false);
+        } else {
+            JOptionPane.showMessageDialog(null, "Empleado no encontrado");
         }
     }
 }
-    
-    
-}
+     
+
