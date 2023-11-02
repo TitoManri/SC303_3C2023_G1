@@ -167,7 +167,14 @@ public class Empleado{
     
     public void inactivarEmpleado(){
     
+        String nombreEmpleadoTemporal = JOptionPane.showInputDialog("Digite el nombre de empleado que quiere editar: ");
+        String emailEmpleadoTemporal = JOptionPane.showInputDialog("Digite el correo electronico del empleado que quiere editar: ");
+        for(Empleado empleado : listaEmpleados) {
+            if (nombreEmpleadoTemporal.equals(empleado.getNombre()) && emailEmpleadoTemporal.equals(empleado.getEmail())) {
+                empleado.setEstado(false);
+        }
     }
+}
     
     
 }
