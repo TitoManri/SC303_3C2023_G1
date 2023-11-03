@@ -1,14 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Catalogos.Personal;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-/**
- *
- * @author manri
- */
 public class Empleado{
     
     //Variables
@@ -23,7 +15,6 @@ public class Empleado{
     private ArrayList<Empleado> listaEmpleados;
 
     //Constructor
-    
     public Empleado() {
         this.nombre = "";
         this.apellidos = "";
@@ -34,17 +25,17 @@ public class Empleado{
         this.numeroEditar = 0;
         this.listaEmpleados = new ArrayList<>();
     }
-
-    public Empleado(String nombre, String apellidos, String cuidad, String dirrecion, String telefono, String email) {
+    
+    //este constructor si tiene proposito, no es un error de escritura
+    public Empleado(String nombre, String apellidos, String cuidad, String dirrecion, String telefono, String email, boolean estado) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.cuidad = cuidad;
         this.dirrecion = dirrecion;
         this.telefono = telefono;
         this.email = email;
-    }
-    
-    
+        this.estado = estado;
+    }  
     
     //Getters and Setters
     public String getNombre() {
@@ -112,8 +103,6 @@ public class Empleado{
     }
     
     
-    
-    
     //Metodos
     //nombre del empleado, apellidos, ciudad, dirección, teléfono, correo electrónico y estado
     public void agregarEmpleado(Empleado empleado){
@@ -129,10 +118,8 @@ public class Empleado{
         }
         return null; 
     }
-
     
-    public void editarEmpleado(){
-        
+    public void editarEmpleado(){   
         String nombreEmpleadoTemporal = JOptionPane.showInputDialog("Digite el nombre de empleado que quiere editar: ");
         String emailEmpleadoTemporal = JOptionPane.showInputDialog("Digite el correo electronico del empleado que quiere editar: ");
         for(Empleado empleado : listaEmpleados) {
@@ -141,35 +128,31 @@ public class Empleado{
             case 1 -> {
                 String nombreEmpleadoEdicion = JOptionPane.showInputDialog("Digite el nuevo nombre del empleado: ");
                 empleado.setNombre(nombreEmpleadoEdicion);
-                    }
+            }
             case 2 -> {
                 String apellidosEmpleadoEdicion = JOptionPane.showInputDialog("Digite el nuevo apellido del empleado: ");
                 empleado.setApellidos(apellidosEmpleadoEdicion);
-                    }
+            }
             case 3 -> {
                 String cuidadEmpleadoEdicion = JOptionPane.showInputDialog("Digite la nueva cuidad del empleado: ");
                 empleado.setCuidad(cuidadEmpleadoEdicion);
-                    }
+            }
             case 4 -> {
                 String direccionEmpleadoEdicion = JOptionPane.showInputDialog("Digite la nueva direccion del empleador: ");
                 empleado.setDirrecion(direccionEmpleadoEdicion);
-                    }
+            }
             case 5 -> {
                 String telefonoEmpleadoEdicion = JOptionPane.showInputDialog("Digite el nuevo telefono del empleado ");
                 empleado.setTelefono(telefonoEmpleadoEdicion);
-                    }
+            }
             case 6 -> {
                 String emailEmpleadoEdicion = JOptionPane.showInputDialog("Digite el nuevo correo de electronico del empleado ");
                 empleado.setEmail(emailEmpleadoEdicion);
-                    }
+            }
             default -> JOptionPane.showMessageDialog(null, "Vuelva a Intentarlo!"); 
-        }
-            
-        }
-    }
-        
-        
-        
+            }
+            }
+        }        
     }
     
         public void inactivarEmpleado(String nombre, String email) {
@@ -182,5 +165,3 @@ public class Empleado{
         }
     }
 }
-     
-
