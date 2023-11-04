@@ -70,15 +70,15 @@ public class Categorias {
             if (categoriaCambio.equals(categorias.getNombreCategorias())){
             switch(getNumeros()){
             case 1 -> {
-                String nombreCategoriasCambio = JOptionPane.showInputDialog("Digite el nuevo nombre del empleado: ");
+                String nombreCategoriasCambio = JOptionPane.showInputDialog("Digite el nuevo nombre de la categoria: ");
                 categorias.setNombreCategorias(nombreCategoriasCambio);
             }
             case 2 -> {
-                String categoriasCambio = JOptionPane.showInputDialog("Digite el nuevo apellido del empleado: ");
-                categorias.setCaracteristicas(categoriasCambio);
+                String caracteristicasCategoriasCambio = JOptionPane.showInputDialog("Digite las nuevas caracteristicas de la categoria: ");
+                categorias.setCaracteristicas(caracteristicasCategoriasCambio);
             }
             case 3 -> {
-                boolean estadoCategoriasCambio = Boolean.parseBoolean(JOptionPane.showInputDialog("Digite la nueva cuidad del empleado: "));
+                boolean estadoCategoriasCambio = Boolean.parseBoolean(JOptionPane.showInputDialog("Digite si la categoria esta activa o inactiva: "));
                 categorias.setEstadoCategorias(estadoCategoriasCambio);
             }
             default -> JOptionPane.showMessageDialog(null, "Vuelva a Intentarlo!"); 
