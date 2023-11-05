@@ -155,7 +155,7 @@ public class Empleado{
         }        
     }
     
-        public void inactivarEmpleado(String nombre, String email) {
+    public void inactivarEmpleado(String nombre, String email) {
         Empleado empleado = buscarEmpleado(nombre, email);
 
         if (empleado != null) {
