@@ -1,11 +1,26 @@
-C:\Users\manri\Desktop\Universidad\Tercer Cuatrimestre\Programacion Cliente-Servidor\Proyecto Final\SC303_3C2023_G1\SC303_3C2023_G1\src\main\java\Catalogos\Catalogo.java
-C:\Users\manri\Desktop\Universidad\Tercer Cuatrimestre\Programacion Cliente-Servidor\Proyecto Final\SC303_3C2023_G1\SC303_3C2023_G1\src\main\java\Jframe\Empleados.java
-C:\Users\manri\Desktop\Universidad\Tercer Cuatrimestre\Programacion Cliente-Servidor\Proyecto Final\SC303_3C2023_G1\SC303_3C2023_G1\src\main\java\Personas\Visitante.java
-C:\Users\manri\Desktop\Universidad\Tercer Cuatrimestre\Programacion Cliente-Servidor\Proyecto Final\SC303_3C2023_G1\SC303_3C2023_G1\src\main\java\Catalogos\Atracciones\Atracciones.java
-C:\Users\manri\Desktop\Universidad\Tercer Cuatrimestre\Programacion Cliente-Servidor\Proyecto Final\SC303_3C2023_G1\SC303_3C2023_G1\src\main\java\Jframe\EditarEmpleados.java
-C:\Users\manri\Desktop\Universidad\Tercer Cuatrimestre\Programacion Cliente-Servidor\Proyecto Final\SC303_3C2023_G1\SC303_3C2023_G1\src\main\java\Jframe\JFrame_Modulo1.java
-C:\Users\manri\Desktop\Universidad\Tercer Cuatrimestre\Programacion Cliente-Servidor\Proyecto Final\SC303_3C2023_G1\SC303_3C2023_G1\src\main\java\Personas\RegistroUsuarios.java
-C:\Users\manri\Desktop\Universidad\Tercer Cuatrimestre\Programacion Cliente-Servidor\Proyecto Final\SC303_3C2023_G1\SC303_3C2023_G1\src\main\java\Catalogos\Categorias\Categorias.java
-C:\Users\manri\Desktop\Universidad\Tercer Cuatrimestre\Programacion Cliente-Servidor\Proyecto Final\SC303_3C2023_G1\SC303_3C2023_G1\src\main\java\Catalogos\Personal\Empleado.java
-C:\Users\manri\Desktop\Universidad\Tercer Cuatrimestre\Programacion Cliente-Servidor\Proyecto Final\SC303_3C2023_G1\SC303_3C2023_G1\src\main\java\Personas\Persona.java
-C:\Users\manri\Desktop\Universidad\Tercer Cuatrimestre\Programacion Cliente-Servidor\Proyecto Final\SC303_3C2023_G1\SC303_3C2023_G1\src\main\java\Personas\Usuario.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/Empleados/InactivarEmpleados.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/IniciodeSesionYRegistro/MainClass.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/Catalogos.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Catalogos/Catalogo.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/Empleados/AgregarEmpleados.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Personas/RegistroUsuarios.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Cliente/MenuPrincipalCliente.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Personas/Usuario.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Catalogos/Personal/Empleado.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Personas/Persona.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/Empleados/EditarEmpleados.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Catalogos/Categorias/Categorias.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/Atracciones/InactivarAtracciones.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/Atracciones/EditarAtracciones.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/CategoriaAtraccion/InactivarCategoriasAtraccion.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/IniciodeSesionYRegistro/Registro.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/CategoriaAtraccion/EditarCategoriasAtraccion.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/IniciodeSesionYRegistro/Inicio.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/Atracciones/AgregarAtracciones.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Personas/Visitante.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Catalogos/Atracciones/Atracciones.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Cliente/Facturacion/Facturacion.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Cliente/Facturacion/IngresosDiarios.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Cliente/MenuAtracciones/MenuAtracciones.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/IniciodeSesionYRegistro/InicioDeSesion.java
+/Users/manri/Desktop/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/CategoriaAtraccion/AgregarCategoriasAtraccion.java

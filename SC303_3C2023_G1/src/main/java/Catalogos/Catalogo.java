@@ -9,5 +9,4 @@ package Catalogos;
  * @author manri
  */
 public class Catalogo {
-    
 }

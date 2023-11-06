@@ -2,7 +2,6 @@ package Catalogos.Personal;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 public class Empleado{
-    
     //Variables
     protected String nombre;
     protected String apellidos;
@@ -12,9 +11,9 @@ public class Empleado{
     protected String email;
     protected boolean estado;
     protected int numeroEditar = 0;
-    private ArrayList<Empleado> listaEmpleados;
+    public ArrayList<Empleado> listaEmpleados;
 
-    //Constructor
+    //Constructor sin parametros
     public Empleado() {
         this.nombre = "";
         this.apellidos = "";
@@ -23,10 +22,10 @@ public class Empleado{
         this.telefono = "";
         this.email = "";
         this.numeroEditar = 0;
-        this.listaEmpleados = new ArrayList<>();
+        this.listaEmpleados = new ArrayList<>();  
     }
-    
-    //este constructor si tiene proposito, no es un error de escritura
+
+    // Constructor con parametros
     public Empleado(String nombre, String apellidos, String cuidad, String dirrecion, String telefono, String email, boolean estado) {
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -35,8 +34,8 @@ public class Empleado{
         this.telefono = telefono;
         this.email = email;
         this.estado = estado;
-    }  
-    
+        this.listaEmpleados = new ArrayList<>(); 
+    }
     //Getters and Setters
     public String getNombre() {
         return nombre;
@@ -101,23 +100,32 @@ public class Empleado{
     public void setNumeroEditar(int numeroEditar) {
         this.numeroEditar = numeroEditar;
     }
+
+    public ArrayList<Empleado> getListaEmpleados() {
+        return listaEmpleados;
+    }
+
+    public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
+        this.listaEmpleados = listaEmpleados;
+    }
+    
     
     
     //Metodos
     //nombre del empleado, apellidos, ciudad, dirección, teléfono, correo electrónico y estado
     public void agregarEmpleado(Empleado empleado){
-        listaEmpleados.add(empleado);
-        
+        listaEmpleados.add(empleado);  
     }
     
     public Empleado buscarEmpleado(String nombre, String email) {
-        for (Empleado empleado : listaEmpleados) {
-            if (nombre.equals(empleado.getNombre()) && email.equals(empleado.getEmail())) {
-                return empleado;
-            }
+    for (Empleado empleado : listaEmpleados) {
+        if (nombre.equals(empleado.getNombre()) && email.equals(empleado.getEmail())) {
+            return empleado;
         }
-        return null; 
     }
+    JOptionPane.showMessageDialog(null, "Empleado no encontrado");
+    return null;
+}
     
     public void editarEmpleado(){   
         String nombreEmpleadoTemporal = JOptionPane.showInputDialog("Digite el nombre de empleado que quiere editar: ");
@@ -155,13 +163,5 @@ public class Empleado{
         }        
     }
     
-    public void inactivarEmpleado(String nombre, String email) {
-        Empleado empleado = buscarEmpleado(nombre, email);
-
-        if (empleado != null) {
-            empleado.setEstado(false);
-        } else {
-            JOptionPane.showMessageDialog(null, "Empleado no encontrado");
-        }
-    }
 }
+
