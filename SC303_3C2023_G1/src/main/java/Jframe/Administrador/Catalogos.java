@@ -223,7 +223,7 @@ public class Catalogos extends javax.swing.JFrame {
     }//GEN-LAST:event_editarEmpleadosActionPerformed
 
     private void inactivarEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inactivarEmpleadosActionPerformed
-        InactivarEmpleados empleados = new InactivarEmpleados(listaEmpleados);
+        InactivarEmpleados empleados = new InactivarEmpleados();
         empleados.setVisible(true);
         empleados.pack();
         empleados.setLocationRelativeTo(null); 

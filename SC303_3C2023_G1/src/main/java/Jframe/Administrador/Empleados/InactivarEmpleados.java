@@ -19,14 +19,20 @@ public class InactivarEmpleados extends javax.swing.JFrame {
     /**
      * Creates new form InactivarEmpleados
      */
-    public InactivarEmpleados(ArrayList<Empleado> listaEmpleados) {
+    public InactivarEmpleados() {
         initComponents();
-        this.listaEmpleados = listaEmpleados;
+        
     }
-    
+
+    public ArrayList<Empleado> getListaEmpleados() {
+        return listaEmpleados;
+    }
+
     public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
         this.listaEmpleados = listaEmpleados;
     }
+    
+    
     
     
     /**
@@ -92,15 +98,23 @@ public class InactivarEmpleados extends javax.swing.JFrame {
         catalogos.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_volverACatalogoActionPerformed
-
+    public Empleado buscarEmpleado(String nombre, String email) {
+    for (Empleado empleado : listaEmpleados) {
+        if (nombre.equals(empleado.getNombre()) && email.equals(empleado.getEmail())) {
+            return empleado;
+        }
+    }
+    JOptionPane.showMessageDialog(null, "Empleado no encontrado");
+    return null;
+    }
     private void inactivarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inactivarUsuarioActionPerformed
     if (this.listaEmpleados != null) {
         String nombreEmpleadoTemporal = JOptionPane.showInputDialog("Digite el nombre de empleado que quiere inactivar: ");
         String emailEmpleadoTemporal = JOptionPane.showInputDialog("Digite el correo electrónico del empleado que quiere inactivar: ");
 
         Empleado empleado = new Empleado();
-        empleado.setListaEmpleados(this.listaEmpleados);
-        Empleado empleadoAInactivar = empleado.buscarEmpleado(nombreEmpleadoTemporal, emailEmpleadoTemporal);
+        setListaEmpleados(this.listaEmpleados);
+        Empleado empleadoAInactivar = buscarEmpleado(nombreEmpleadoTemporal, emailEmpleadoTemporal);
 
         if (empleadoAInactivar != null) {
             empleadoAInactivar.setEstado(false);
@@ -144,7 +158,7 @@ public class InactivarEmpleados extends javax.swing.JFrame {
             public void run() {
                 
                 ArrayList<Empleado> listaEmpleados = new ArrayList<>();
-                new InactivarEmpleados(listaEmpleados).setVisible(true);
+                
 
             }
         });

@@ -6,7 +6,10 @@ package Jframe.Administrador.Empleados;
 
 import Catalogos.Personal.Empleado;
 import Jframe.Administrador.Catalogos;
+
+import java.io.IOException;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -175,35 +178,73 @@ public class EditarEmpleados extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+   
 
+    
+    
+    public void editarEmpleado(){   
+        String nombreEmpleadoTemporal = JOptionPane.showInputDialog("Digite el nombre de empleado que quiere editar: ");
+        String emailEmpleadoTemporal = JOptionPane.showInputDialog("Digite el correo electronico del empleado que quiere editar: ");
+        for(Empleado empleado : listaEmpleados) {
+            if (nombreEmpleadoTemporal.equals(empleado.getNombre()) && emailEmpleadoTemporal.equals(empleado.getEmail())) {
+            switch(empleado.getNumeroEditar()){
+            case 1 -> {
+                String nombreEmpleadoEdicion = JOptionPane.showInputDialog("Digite el nuevo nombre del empleado: ");
+                empleado.setNombre(nombreEmpleadoEdicion);
+            }
+            case 2 -> {
+                String apellidosEmpleadoEdicion = JOptionPane.showInputDialog("Digite el nuevo apellido del empleado: ");
+                empleado.setApellidos(apellidosEmpleadoEdicion);
+            }
+            case 3 -> {
+                String cuidadEmpleadoEdicion = JOptionPane.showInputDialog("Digite la nueva cuidad del empleado: ");
+                empleado.setCuidad(cuidadEmpleadoEdicion);
+            }
+            case 4 -> {
+                String direccionEmpleadoEdicion = JOptionPane.showInputDialog("Digite la nueva direccion del empleador: ");
+                empleado.setDirrecion(direccionEmpleadoEdicion);
+            }
+            case 5 -> {
+                String telefonoEmpleadoEdicion = JOptionPane.showInputDialog("Digite el nuevo telefono del empleado ");
+                empleado.setTelefono(telefonoEmpleadoEdicion);
+            }
+            case 6 -> {
+                String emailEmpleadoEdicion = JOptionPane.showInputDialog("Digite el nuevo correo de electronico del empleado ");
+                empleado.setEmail(emailEmpleadoEdicion);
+            }
+            default -> JOptionPane.showMessageDialog(null, "Vuelva a Intentarlo!"); 
+            }
+            }
+        }        
+    }
     private void editarNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarNombreActionPerformed
         empleado.setNumeroEditar(1);
-        empleado.editarEmpleado();
+        editarEmpleado();
     }//GEN-LAST:event_editarNombreActionPerformed
 
     private void editarApellidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarApellidosActionPerformed
         empleado.setNumeroEditar(2);
-        empleado.editarEmpleado();
+        editarEmpleado();
     }//GEN-LAST:event_editarApellidosActionPerformed
 
     private void editarDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarDireccionActionPerformed
         empleado.setNumeroEditar(4);
-        empleado.editarEmpleado();
+        editarEmpleado();
     }//GEN-LAST:event_editarDireccionActionPerformed
 
     private void editarCuidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarCuidadActionPerformed
         empleado.setNumeroEditar(3);
-        empleado.editarEmpleado();
+        editarEmpleado();
     }//GEN-LAST:event_editarCuidadActionPerformed
 
     private void editarEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarEmailActionPerformed
         empleado.setNumeroEditar(6);
-        empleado.editarEmpleado();
+        editarEmpleado();
     }//GEN-LAST:event_editarEmailActionPerformed
 
     private void editarTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarTelefonoActionPerformed
         empleado.setNumeroEditar(5);
-        empleado.editarEmpleado();
+        editarEmpleado();
     }//GEN-LAST:event_editarTelefonoActionPerformed
 
     private void volverACatalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverACatalogoActionPerformed

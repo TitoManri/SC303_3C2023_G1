@@ -25,9 +25,6 @@ public class MainClass {
         inicio.pack();
         inicio.setLocationRelativeTo(null); 
         
-        //ArrayList Empleado
-        ArrayList<Empleado> listaEmpleados = new ArrayList<>();
-        AgregarEmpleados ventanaAgregarEmpleados = new AgregarEmpleados(listaEmpleados);
 
     }
     

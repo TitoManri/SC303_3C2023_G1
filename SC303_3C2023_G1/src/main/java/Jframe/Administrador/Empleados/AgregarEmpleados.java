@@ -6,6 +6,8 @@ package Jframe.Administrador.Empleados;
 
 import Catalogos.Personal.Empleado;
 import Jframe.Administrador.Catalogos;
+import static java.awt.PageAttributes.MediaType.D;
+import java.io.*; 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
@@ -14,17 +16,14 @@ import javax.swing.JOptionPane;
  * @author manri
  */
 public class AgregarEmpleados extends javax.swing.JFrame {
-    private ArrayList<Empleado> listaEmpleados;
+    ArrayList<Empleado> listaEmpleados = new ArrayList<>();
     /**
      * Creates new form Empleadoss
      */
     public AgregarEmpleados() {
         initComponents();
     }
-    public AgregarEmpleados(ArrayList<Empleado> listaEmpleados) {
-        initComponents();
-        this.listaEmpleados = listaEmpleados;
-    }
+
     
     public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
         this.listaEmpleados = listaEmpleados;
@@ -198,8 +197,12 @@ public class AgregarEmpleados extends javax.swing.JFrame {
     private void emailEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailEmpleadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_emailEmpleadoActionPerformed
-
+    public void agregarEmpleado(Empleado empleado){
+        listaEmpleados.add(empleado);  
+    }
     private void registrarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarEmpleadoActionPerformed
+    try{
+    BufferedWriter archivo = new BufferedWriter(new FileWriter("src/main/java/BaseDeDatos/Empleados.txt", true));   
     String nombreEmpleado = nombre.getText();
     String apellidos = apellidosEmpleado.getText();
     String ciudad = cuidadEmpleado.getText();
@@ -208,22 +211,34 @@ public class AgregarEmpleados extends javax.swing.JFrame {
     String email = emailEmpleado.getText();
     boolean estado = true;
 
-    Empleado empleado = new Empleado();
-    empleado.setNombre(nombreEmpleado);
-    empleado.setApellidos(apellidos);
-    empleado.setCuidad(ciudad);
-    empleado.setDirrecion(direccion);
-    empleado.setTelefono(telefono);
-    empleado.setEmail(email);
-    empleado.setEstado(estado);
-
     
-    if (listaEmpleados != null) {
+
+    if ((nombreEmpleado.equals(""))||(apellidos.equals(""))||(ciudad.equals(""))||(direccion.equals(""))||(telefono.equals(""))||(email.equals(""))) {
+        //Si nos faltó escribir algún dato, lanzamos un error, esto cae en el catch
+        throw new Exception("Algunos de los campos requeridos no fueron completados");
+    }else{
+        Empleado empleado = new Empleado();
+        empleado.setNombre(nombreEmpleado);
+        empleado.setApellidos(apellidos);
+        empleado.setCuidad(ciudad);
+        empleado.setDirrecion(direccion);
+        empleado.setTelefono(telefono);
+        empleado.setEmail(email);
+        empleado.setEstado(estado);
         listaEmpleados.add(empleado); 
-        JOptionPane.showMessageDialog(null, "Empleado Agregado con Éxito");
-    } else {
-        JOptionPane.showMessageDialog(null, "Error: Lista de empleados no inicializada");
+        
+        archivo.write("Nombre: "+empleado.getNombre() + "   Apellidos: " + empleado.getApellidos() + "   Cuidad: " + empleado.getCuidad()+ "   Direccion: " + empleado.getDirrecion() + "   Telefono: " + empleado.getTelefono() + "   Email: " + empleado.getEmail() + "    Estado: " + estado);
+        archivo.newLine();
+        archivo.close();
+
+        
     }
+    }catch(Exception e){
+        JOptionPane.showMessageDialog(null, "Error al agregar los datos: " + e.getMessage(), "Error!",
+                    JOptionPane.INFORMATION_MESSAGE);
+    }
+        
+    
     }//GEN-LAST:event_registrarEmpleadoActionPerformed
 
     private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
