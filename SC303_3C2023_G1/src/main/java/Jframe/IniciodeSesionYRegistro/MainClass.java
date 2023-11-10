@@ -6,7 +6,7 @@ package Jframe.IniciodeSesionYRegistro;
 
 import Catalogos.Personal.Empleado;
 import Jframe.Administrador.Catalogos;
-import Jframe.Administrador.Empleados.AgregarEmpleados;
+import Jframe.Administrador.Empleados.CatalogoEmpleado;
 import Jframe.IniciodeSesionYRegistro.Inicio;
 import java.util.ArrayList;
 

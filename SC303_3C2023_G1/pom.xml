@@ -12,4 +12,11 @@
         <exec.mainClass>Prototipo1Modulo1CS</exec.mainClass>
     </properties>
     <name>SC303_3C2023_G1</name>
+    <dependencies>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE180</version>
+        </dependency>
+    </dependencies>
 </project>

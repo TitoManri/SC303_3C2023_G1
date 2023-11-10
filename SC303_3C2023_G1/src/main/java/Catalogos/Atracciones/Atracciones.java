@@ -7,7 +7,7 @@ public class Atracciones {
     
     protected String nombreAtraccion;
     protected Categorias categoria;
-    protected Empleado empleadoACargo;
+    protected String empleadoACargo;
     ArrayList<Categorias> atracciones = new ArrayList();;
 
     //Constructores
@@ -35,11 +35,11 @@ public class Atracciones {
         this.categoria = categoria;
     }
 
-    public Empleado getEmpleadoACargo() {
+    public String getEmpleadoACargo() {
         return empleadoACargo;
     }
 
-    public void setEmpleadoACargo(Empleado empleadoACargo) {
+    public void setEmpleadoACargo(String empleadoACargo) {
         this.empleadoACargo = empleadoACargo;
     }
 

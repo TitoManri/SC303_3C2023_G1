@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Jframe.IniciodeSesionYRegistro;
-import Jframe.Administrador.Empleados.AgregarEmpleados;
+import Jframe.Administrador.Empleados.CatalogoEmpleado;
 import java.awt.CardLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
