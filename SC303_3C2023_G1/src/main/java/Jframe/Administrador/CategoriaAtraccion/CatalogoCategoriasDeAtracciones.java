@@ -183,6 +183,8 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
                 categoria.setEstadoCategorias(true);
                 listaCategorias.add(categoria);
                 guardarEnArchivo();
+                JOptionPane.showMessageDialog(null, "Categoria Agregada Correctamente");
+                limpiar();
             }
         }
     } catch (Exception e) {
@@ -260,6 +262,11 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Error al cargar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
+    }
+    
+    private void limpiar(){
+        nombreCategoria.setText(null);
+        caracteristicasCategoria.setText(null);
     }
     
     private Categorias partesCategorias(String line) {

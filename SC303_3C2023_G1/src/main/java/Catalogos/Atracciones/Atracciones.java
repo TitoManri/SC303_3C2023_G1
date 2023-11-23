@@ -1,20 +1,19 @@
 package Catalogos.Atracciones;
 
-import Catalogos.Categorias.Categorias;
-import Catalogos.Personal.Empleado;
-import java.util.ArrayList;
 public class Atracciones {
     
     protected String nombreAtraccion;
-    protected Categorias categoria;
+    protected String categoria;
     protected String empleadoACargo;
-    ArrayList<Categorias> atracciones = new ArrayList();;
+    protected String precioEnTicketes;
+    protected boolean estado;
 
     //Constructores
     public Atracciones() {
         this.nombreAtraccion = "";
-        this.categoria = categoria;
-        this.empleadoACargo = empleadoACargo;
+        this.categoria = "";
+        this.empleadoACargo = "";
+        this.precioEnTicketes = "";
     }
     
     
@@ -27,11 +26,11 @@ public class Atracciones {
         this.nombreAtraccion = nombreAtraccion;
     }
 
-    public Categorias getCategoria() {
+    public String getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(Categorias categoria) {
+    public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
 
@@ -43,19 +42,22 @@ public class Atracciones {
         this.empleadoACargo = empleadoACargo;
     }
 
-    
-    /*Metodos
-      Agrecacion Editacion e inactivacion de las atracciones*/
-    public void agregarAtracciones(){
-        
+    public String getPrecioEnTicketes() {
+        return precioEnTicketes;
     }
-    
-    public void editarAtracciones(){
-    
+
+    public void setPrecioEnTicketes(String precioEnTicketes) {
+        this.precioEnTicketes = precioEnTicketes;
     }
-    
-    public void inactivarAtracciones(){
-    
+
+    public boolean isEstado() {
+        return estado;
     }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
+    
     
 }

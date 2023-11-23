@@ -6,7 +6,6 @@ package Jframe.Administrador.Empleados;
 
 import Catalogos.Personal.Empleado;
 import Jframe.Administrador.Catalogos;
-import static java.awt.PageAttributes.MediaType.D;
 import java.io.*; 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -290,6 +289,9 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
 
                 listaEmpleados.add(empleado);
                 guardarEnArchivo();
+                JOptionPane.showMessageDialog(null, "Empleado Correctamente Agregado");
+                limpiar();
+                
             }
         }
     } catch (Exception e) {
@@ -451,7 +453,14 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
                 JOptionPane.ERROR_MESSAGE);
     }
 }
-    
+    private void limpiar(){
+        nombre.setText(null);
+        apellidosEmpleado.setText(null);
+        cuidadEmpleado.setText(null);
+        direccionEmpleado.setText(null);
+        telefonoEmpleado.setText(null);
+        emailEmpleado.setText(null);
+    }
     private void mostrarEmpleadoEspecifico(Empleado empleado) {
     JOptionPane.showMessageDialog(
             null,
