@@ -270,7 +270,7 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
     }
     
     private Categorias partesCategorias(String line) {
-    String[] partes = line.split("\\s+");
+    String[] partes = line.split(",");
     if (partes.length >= 3) {
         Categorias categorias= new Categorias();
         categorias.setNombreCategorias(partes[0]);
@@ -317,7 +317,8 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
     }
     
     private String formatoCategorias(Categorias categorias) {
-        return String.format("%s %s %s", categorias.getNombreCategorias(), categorias.getCaracteristicasCategorias(), categorias.isEstadoCategorias());
+        return categorias.getNombreCategorias()+","+categorias.getCaracteristicasCategorias()+","+ categorias.isEstadoCategorias();
+
     }
     /**
      * @param args the command line arguments

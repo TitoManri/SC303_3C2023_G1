@@ -352,8 +352,8 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
     
     
     private Atracciones partesAtracciones(String line) {
-        String[] partes = line.split("\\s+");
-        if (partes.length >= 3) {
+        String[] partes = line.split(",");
+        if (partes.length >= 5) {
             Atracciones atracciones= new Atracciones();
             atracciones.setNombreAtraccion(partes[0]);
             atracciones.setCategoria(partes[1]);
@@ -368,7 +368,7 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
     }
     
     private Categorias partesCategorias(String line) {
-        String[] partes = line.split("\\s+");
+        String[] partes = line.split(",");
         if (partes.length >= 3) {
             Categorias categorias= new Categorias();
             categorias.setNombreCategorias(partes[0]);
@@ -382,7 +382,7 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
     }
     
     private Empleado partesEmpleado(String line) {
-        String[] partes = line.split("\\s+");
+        String[] partes = line.split(",");
         if (partes.length >= 7) {
             Empleado empleado = new Empleado();
             empleado.setNombre(partes[0]);
@@ -398,14 +398,10 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
         }
     }
     
+    
     private String formatoAtracciones(Atracciones atracciones) {
-    return String.format("%s %s %s %s %s",
-            atracciones.getNombreAtraccion(),
-            atracciones.getCategoria(),
-            atracciones.getEmpleadoACargo(),
-            atracciones.getPrecioEnTicketes(),
-            atracciones.isEstado());
-}
+        return atracciones.getNombreAtraccion() + "," + atracciones.getCategoria() + "," + atracciones.getEmpleadoACargo() + "," + atracciones.getPrecioEnTicketes() + "," + atracciones.isEstado();
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

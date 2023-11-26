@@ -426,7 +426,7 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
 }
     
     private Empleado partesEmpleado(String line) {
-    String[] partes = line.split("\\s+");
+    String[] partes = line.split(",");
     if (partes.length >= 7) {
         Empleado empleado = new Empleado();
         empleado.setNombre(partes[0]);
@@ -486,9 +486,9 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
    }
     
     private String formatoEmpleado(Empleado emp) {
-    return String.format("%s %s %s %s %s %s %s",
-            emp.getNombre(), emp.getApellidos(), emp.getCuidad(), emp.getDirrecion(), emp.getTelefono(), emp.getEmail(), emp.isEstado());
-}
+        return emp.getNombre()+","+ emp.getApellidos()+","+ emp.getCuidad()+","+ emp.getDirrecion()+","+emp.getTelefono()+","+emp.getEmail()+","+ emp.isEstado();
+
+    }
     /**
      * @param args the command line arguments
      */
