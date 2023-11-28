@@ -1,19 +1,33 @@
 package Personas;
 
-
-
 public class Usuario {
+  
+   //Variables
    protected String nombre;
    protected String apellidos;
    protected String nickname;
    protected String password;
    protected boolean estado; // true es activo | false es inactivo
+ 
+   // constructor sin parametros
+    public Usuario() {
+        this.nombre = "";
+        this.apellidos = "";
+        this.nickname = "";
+        this.password = "";
+    }
 
-
-    public Usuario(String nombre, String apellidos, String nickname, String password) {
+    // constructor con parametros
+    public Usuario(String nombre, String apellidos, String nickname, String password, boolean estado) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.nickname = nickname;
+        this.password = password;
+        this.estado = true; // Por defecto, un nuevo usuario se crea como activo
     }
 
 
+    // getters setters
     public String getNombre() {
         return nombre;
     }
@@ -56,6 +70,10 @@ public class Usuario {
     
     public void inactivarUsuario(){
         this.estado = false;
+    }
+
+    public boolean isEstado() {
+        return estado;
     }
 
 }

@@ -28,7 +28,8 @@ public class RegistroUsuarios {
             if (usuario.estaActivo()) {
                 usuario.inactivarUsuario();
                 return true; // usuario encontrado y marcado como inactivo
-            } else {
+            } else 
+            {
                 return false; // usuario ya estaba inactivo
             }
         }
@@ -37,7 +38,7 @@ public class RegistroUsuarios {
     }
 
     public boolean tieneDatosRelacionados(Usuario usuario) {
-        // Metodo para verificar si el usuario no tiene datos relacionados en otro catalogos (por asignar)
+        
         return false;
     }
 
