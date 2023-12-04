@@ -5,6 +5,7 @@
 package Jframe.IniciodeSesionYRegistro;
 
 import Jframe.Administrador.Catalogos;
+import Jframe.Cliente.Facturacion.Facturacion;
 
 /**
  *
@@ -26,6 +27,7 @@ public class InicioDeSesion extends javax.swing.JFrame {
         irACatalogo = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        irAFacturacion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,6 +44,13 @@ public class InicioDeSesion extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         jLabel2.setText("Usuario:");
 
+        irAFacturacion.setText("Ir a facturacion");
+        irAFacturacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                irAFacturacionActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -55,9 +64,11 @@ public class InicioDeSesion extends javax.swing.JFrame {
                         .addGap(278, 278, 278)
                         .addComponent(jLabel2)))
                 .addContainerGap(397, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(irACatalogo, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(irAFacturacion, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(irACatalogo, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -69,7 +80,9 @@ public class InicioDeSesion extends javax.swing.JFrame {
                 .addComponent(irACatalogo, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
-                .addContainerGap(312, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(irAFacturacion, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
         pack();
@@ -82,6 +95,15 @@ public class InicioDeSesion extends javax.swing.JFrame {
         catalogos.setLocationRelativeTo(null); 
         this.dispose();
     }//GEN-LAST:event_irACatalogoActionPerformed
+
+    // boton para ir a panel de facturacion
+    private void irAFacturacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_irAFacturacionActionPerformed
+        Facturacion fact1 = new Facturacion();
+        fact1.setVisible(true);
+        fact1.pack();
+        fact1.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_irAFacturacionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,6 +143,7 @@ public class InicioDeSesion extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton irACatalogo;
+    private javax.swing.JButton irAFacturacion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables

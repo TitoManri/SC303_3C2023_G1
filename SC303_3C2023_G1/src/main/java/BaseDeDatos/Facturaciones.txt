@@ -1,0 +1,9 @@
+Usuario: Den
+Precio de entrada: ₡5000
+Atraccion: Boomerang
+Precio en Tickets: 12
+Veces de uso:  2
+Total de tickets a pagar: 24
+Total a pagar (colones): ₡5000
+ Fecha y hora de facturacion: 2023-12-03 22:46:58
+------------------------------------------------
