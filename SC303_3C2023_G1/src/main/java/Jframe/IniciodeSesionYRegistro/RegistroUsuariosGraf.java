@@ -274,7 +274,17 @@ public class RegistroUsuariosGraf extends javax.swing.JFrame {
 
     // Boton de inactivar
     private void inactivatBotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inactivatBotActionPerformed
-            
+        try {
+        String nicknameUsuarioInactivar = inactivarUsuario.getText();
+
+        if (nicknameUsuarioInactivar.isEmpty()) {
+            throw new Exception("Por favor, ingrese un nickname");
+        } else {
+            InactivarUsuario(nicknameUsuarioInactivar);
+        }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Error al inactivar usuario: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
     }//GEN-LAST:event_inactivatBotActionPerformed
 ////////////////////////////////////////////////////////////////////////////////
     
@@ -335,7 +345,27 @@ public class RegistroUsuariosGraf extends javax.swing.JFrame {
           return null;
       }
     
-    
+      private Usuario encontrarUsuarioPorNickname(String nicknameUsuario) {
+    for (Usuario usuario : listaUsuarios) {
+        if (usuario.getNickname().equals(nicknameUsuario)) {
+            return usuario;
+        }
+    }
+    return null;
+    }
+      
+     private void InactivarUsuario(String nicknameUsuario) {
+    Usuario usuario = encontrarUsuarioPorNickname(nicknameUsuario);
+
+    if (usuario != null) {
+        usuario.setEstado(false); 
+        guardarEnArchivo(); 
+        JOptionPane.showMessageDialog(null, "Usuario inactivado con éxito");
+    } else {
+        JOptionPane.showMessageDialog(null, "No se encontró un usuario con el nickname proporcionado");
+    }
+}
+      
   
     
     
