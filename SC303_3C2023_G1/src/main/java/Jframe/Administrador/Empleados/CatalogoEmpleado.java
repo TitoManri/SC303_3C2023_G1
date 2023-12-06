@@ -9,6 +9,7 @@ import Jframe.Administrador.Catalogos;
 import java.io.*; 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -22,6 +23,7 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
     public CatalogoEmpleado() {
         initComponents();
         cargarDesdeArchivo();
+        actualizarTabla();
     }
 
     
@@ -37,6 +39,8 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         telefonoEmpleado = new javax.swing.JTextField();
         labelTelefono = new javax.swing.JLabel();
         emailEmpleado = new javax.swing.JTextField();
@@ -57,24 +61,57 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
         labelTelefono4 = new javax.swing.JLabel();
         limpiarEspacios = new javax.swing.JButton();
         labelTelefono5 = new javax.swing.JLabel();
+        labelTelefono6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Nombre", "Estado"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setResizable(false);
+            jTable1.getColumnModel().getColumn(1).setResizable(false);
+        }
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 149, 290, 300));
 
         telefonoEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 telefonoEmpleadoActionPerformed(evt);
             }
         });
+        getContentPane().add(telefonoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 380, 223, -1));
 
         labelTelefono.setText("Teléfono");
+        getContentPane().add(labelTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 363, -1, -1));
 
         emailEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailEmpleadoActionPerformed(evt);
             }
         });
+        getContentPane().add(emailEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 223, -1));
 
         labelEmaill.setText("Correo Electronico");
+        getContentPane().add(labelEmaill, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 363, -1, -1));
 
         registrarEmpleado.setText("Registrar Empleado");
         registrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
@@ -82,38 +119,47 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
                 registrarEmpleadoActionPerformed(evt);
             }
         });
+        getContentPane().add(registrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 465, -1, -1));
 
         nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreActionPerformed(evt);
             }
         });
+        getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 190, 223, -1));
 
         labelNombre.setText("Nombre");
+        getContentPane().add(labelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 167, -1, -1));
 
         apellidosEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 apellidosEmpleadoActionPerformed(evt);
             }
         });
+        getContentPane().add(apellidosEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 223, -1));
 
         labelApellidos.setText("Apellidos");
+        getContentPane().add(labelApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 167, -1, -1));
 
         cuidadEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cuidadEmpleadoActionPerformed(evt);
             }
         });
+        getContentPane().add(cuidadEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 301, 223, -1));
 
         labelCuidad.setText("Cuidad");
+        getContentPane().add(labelCuidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 266, -1, -1));
 
         direccionEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 direccionEmpleadoActionPerformed(evt);
             }
         });
+        getContentPane().add(direccionEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 301, 223, -1));
 
         labelDireccion.setText("Dirección");
+        getContentPane().add(labelDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 266, -1, -1));
 
         volverACatalogo.setText("Volver a Catalogo");
         volverACatalogo.addActionListener(new java.awt.event.ActionListener() {
@@ -121,9 +167,11 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
                 volverACatalogoActionPerformed(evt);
             }
         });
+        getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(887, 577, -1, -1));
 
         labelTelefono1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         labelTelefono1.setText("Editar e Inactivar Empleado");
+        getContentPane().add(labelTelefono1, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 526, -1, -1));
 
         editarEmpleado.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         editarEmpleado.setText("Editar");
@@ -132,12 +180,15 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
                 editarEmpleadoActionPerformed(evt);
             }
         });
+        getContentPane().add(editarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(452, 527, -1, -1));
 
         labelTelefono3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         labelTelefono3.setText("Agregar Nuevo Empleado");
+        getContentPane().add(labelTelefono3, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 113, -1, -1));
 
         labelTelefono4.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
         labelTelefono4.setText("Catalogo Empleado");
+        getContentPane().add(labelTelefono4, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 24, -1, -1));
 
         limpiarEspacios.setText("Limpiar");
         limpiarEspacios.addActionListener(new java.awt.event.ActionListener() {
@@ -145,108 +196,30 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
                 limpiarEspaciosActionPerformed(evt);
             }
         });
+        getContentPane().add(limpiarEspacios, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 465, 118, -1));
 
         labelTelefono5.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         labelTelefono5.setText("->");
+        getContentPane().add(labelTelefono5, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 526, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(111, 111, 111)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelNombre)
-                                    .addComponent(cuidadEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelCuidad)
-                                    .addComponent(labelTelefono)
-                                    .addComponent(telefonoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(143, 143, 143)
-                                .addComponent(registrarEmpleado)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(56, 56, 56)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelApellidos)
-                                    .addComponent(apellidosEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelDireccion)
-                                    .addComponent(direccionEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(emailEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(labelEmaill)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(92, 92, 92)
-                                .addComponent(limpiarEspacios, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelTelefono3)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(labelTelefono4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 267, Short.MAX_VALUE)
-                                .addComponent(volverACatalogo))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(labelTelefono1)
-                        .addGap(18, 18, 18)
-                        .addComponent(labelTelefono5)
-                        .addGap(18, 18, 18)
-                        .addComponent(editarEmpleado)
-                        .addGap(222, 222, 222)))
-                .addGap(34, 34, 34))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelTelefono4)
-                    .addComponent(volverACatalogo))
-                .addGap(41, 41, 41)
-                .addComponent(labelTelefono3)
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelNombre)
-                    .addComponent(labelApellidos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(apellidosEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelCuidad)
-                    .addComponent(labelDireccion))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cuidadEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(direccionEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelTelefono)
-                    .addComponent(labelEmaill))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(telefonoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(emailEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(registrarEmpleado)
-                    .addComponent(limpiarEspacios))
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(editarEmpleado)
-                    .addComponent(labelTelefono1)
-                    .addComponent(labelTelefono5))
-                .addGap(47, 47, 47))
-        );
+        labelTelefono6.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        labelTelefono6.setText("Lista Empleado");
+        getContentPane().add(labelTelefono6, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 92, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    private void actualizarTabla() {
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        model.setRowCount(0); // Clear the existing rows in the table
 
+        for (Empleado empleado : listaEmpleados) {
+            Object[] rowData = {
+                empleado.getNombre(),
+                empleado.isEstado() ? "Activo" : "Inactivo"
+            };
+            model.addRow(rowData);
+        }
+    }
     private void telefonoEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_telefonoEmpleadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_telefonoEmpleadoActionPerformed
@@ -291,6 +264,7 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
                 guardarEnArchivo();
                 JOptionPane.showMessageDialog(null, "Empleado Correctamente Agregado");
                 limpiar();
+                actualizarTabla();
                 
             }
         }
@@ -346,6 +320,7 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
 
         
         guardarEnArchivo();
+        actualizarTabla();
     } else {
         JOptionPane.showMessageDialog(null, "Empleado no encontrado.", "Error", JOptionPane.ERROR_MESSAGE);
     }
@@ -537,6 +512,8 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
     private javax.swing.JTextField direccionEmpleado;
     private javax.swing.JButton editarEmpleado;
     private javax.swing.JTextField emailEmpleado;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel labelApellidos;
     private javax.swing.JLabel labelCuidad;
     private javax.swing.JLabel labelDireccion;
@@ -547,6 +524,7 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
     private javax.swing.JLabel labelTelefono3;
     private javax.swing.JLabel labelTelefono4;
     private javax.swing.JLabel labelTelefono5;
+    private javax.swing.JLabel labelTelefono6;
     private javax.swing.JButton limpiarEspacios;
     private javax.swing.JTextField nombre;
     private javax.swing.JButton registrarEmpleado;

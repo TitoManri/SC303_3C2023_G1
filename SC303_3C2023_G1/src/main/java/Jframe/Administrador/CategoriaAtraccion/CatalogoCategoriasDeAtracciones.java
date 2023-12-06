@@ -14,6 +14,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -21,12 +22,24 @@ import javax.swing.JOptionPane;
  */
 public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
     ArrayList<Categorias> listaCategorias = new ArrayList<>();
+    DefaultTableModel modeloTabla;
+
     /**
+     * 
      * Creates new form CategoriaAtraccionn
      */
     public CatalogoCategoriasDeAtracciones() {
         initComponents();
         cargarDesdeArchivo();
+        modeloTabla = new DefaultTableModel();
+
+        jTable1.setModel(modeloTabla);
+
+        modeloTabla.addColumn("Nombre");
+        modeloTabla.addColumn("Caracteristicas");
+
+        llenarTabla();
+        
     }
 
     /**
@@ -38,6 +51,8 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         caracteristicasCategoria = new javax.swing.JTextField();
@@ -48,17 +63,49 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         limpiarCategoria = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Nombre", "Caracteristicas"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setResizable(false);
+            jTable1.getColumnModel().getColumn(1).setResizable(false);
+        }
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 72, 270, 282));
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel1.setText("Nombre de la Categoria");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 128, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel2.setText("Caracteristicas de la Categoria");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 193, -1, -1));
 
         caracteristicasCategoria.setColumns(5);
         caracteristicasCategoria.setFont(new java.awt.Font("Monospaced", 0, 13)); // NOI18N
+        getContentPane().add(caracteristicasCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 234, 234, -1));
 
         agregarCategoriaBoton.setText("Agregar Categoria");
         agregarCategoriaBoton.addActionListener(new java.awt.event.ActionListener() {
@@ -66,6 +113,8 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
                 agregarCategoriaBotonActionPerformed(evt);
             }
         });
+        getContentPane().add(agregarCategoriaBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 435, -1, -1));
+        getContentPane().add(nombreCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 164, 234, -1));
 
         volverACatalogo.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         volverACatalogo.setText("Volver a Catalogo");
@@ -74,6 +123,7 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
                 volverACatalogoActionPerformed(evt);
             }
         });
+        getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 512, 209, -1));
 
         editarCategoria.setText("Editar");
         editarCategoria.addActionListener(new java.awt.event.ActionListener() {
@@ -81,12 +131,15 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
                 editarCategoriaActionPerformed(evt);
             }
         });
+        getContentPane().add(editarCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(413, 435, 169, -1));
 
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel4.setText("Editar e Inactivar Categoria");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 394, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         jLabel5.setText("Catalogo Categorias");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 36, -1, -1));
 
         limpiarCategoria.setText("Limpiar");
         limpiarCategoria.addActionListener(new java.awt.event.ActionListener() {
@@ -94,75 +147,23 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
                 limpiarCategoriaActionPerformed(evt);
             }
         });
+        getContentPane().add(limpiarCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 435, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(nombreCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(agregarCategoriaBoton)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(limpiarCategoria))
-                                .addComponent(caracteristicasCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
-                        .addComponent(jLabel4)
-                        .addGap(128, 128, 128))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(volverACatalogo, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(17, 17, 17))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(editarCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(158, 158, 158))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(volverACatalogo))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(jLabel5)))
-                .addGap(103, 103, 103)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(nombreCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(23, 23, 23)
-                        .addComponent(caracteristicasCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel4))
-                .addGap(2, 2, 2)
-                .addComponent(editarCategoria)
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(agregarCategoriaBoton)
-                    .addComponent(limpiarCategoria))
-                .addContainerGap(120, Short.MAX_VALUE))
-        );
+        jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel6.setText("Lista Categorias");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    private void llenarTabla() {
+    modeloTabla.setRowCount(0);
 
+    for (Categorias categoria : listaCategorias) {
+        Object[] fila = {categoria.getNombreCategorias(), categoria.getCaracteristicasCategorias()};
+        modeloTabla.addRow(fila);
+    }
+}
     private void agregarCategoriaBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarCategoriaBotonActionPerformed
     try {
         String nombreCategorias = nombreCategoria.getText();
@@ -185,6 +186,8 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
                 guardarEnArchivo();
                 JOptionPane.showMessageDialog(null, "Categoria Agregada Correctamente");
                 limpiar();
+                llenarTabla();
+
             }
         }
     } catch (Exception e) {
@@ -378,6 +381,9 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JButton limpiarCategoria;
     private javax.swing.JTextField nombreCategoria;
     private javax.swing.JButton volverACatalogo;

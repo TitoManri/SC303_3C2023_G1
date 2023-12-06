@@ -15,6 +15,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
 
 /**
  *
@@ -24,13 +27,17 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
     ArrayList<Categorias> categoriasAtraccion = new ArrayList<>(); 
     ArrayList<Empleado> empleados = new ArrayList<>();
     ArrayList<Atracciones> listaAtracciones = new ArrayList<>();
-    
+    private DefaultTableModel empleadosTableModel;
+    private DefaultTableModel categoriasTableModel;
+  
     /**
      * Creates new form Atraccioness
      */
     public CatalogoAtracciones() {
         initComponents();
+        inicializarTablas();
         cargarDesdeArchivo();
+
     }
 
     /**
@@ -42,14 +49,14 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        categoriasTabla = new javax.swing.JTable();
         limpiar = new javax.swing.JButton();
         nombreAtraccionTexto = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         categoriasTexto = new javax.swing.JTextField();
         agregarAtraccionBoton = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        empleadosDisponibles = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         volverACatalogo = new javax.swing.JButton();
@@ -57,16 +64,43 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         editarAtraccion = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        categoriasCuadro1 = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
         empleadoTexto = new javax.swing.JTextField();
         precioEnTicketesTexto = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        empleadosTabla = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximizedBounds(new java.awt.Rectangle(0, 0, 0, 0));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        categoriasTabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Nombre", "Estado"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(categoriasTabla);
+        if (categoriasTabla.getColumnModel().getColumnCount() > 0) {
+            categoriasTabla.getColumnModel().getColumn(0).setResizable(false);
+            categoriasTabla.getColumnModel().getColumn(1).setResizable(false);
+        }
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 250, 230));
 
         limpiar.setText("Limpiar");
         limpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -74,29 +108,29 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
                 limpiarActionPerformed(evt);
             }
         });
-        getContentPane().add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 370, 84, -1));
+        getContentPane().add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 84, -1));
 
         nombreAtraccionTexto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreAtraccionTextoActionPerformed(evt);
             }
         });
-        getContentPane().add(nombreAtraccionTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 230, -1));
+        getContentPane().add(nombreAtraccionTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 230, -1));
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel3.setText("Nombre Atraccion");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel4.setText("Empleado");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 340, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, -1, -1));
 
         categoriasTexto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 categoriasTextoActionPerformed(evt);
             }
         });
-        getContentPane().add(categoriasTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 300, 220, 20));
+        getContentPane().add(categoriasTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 340, 220, 20));
 
         agregarAtraccionBoton.setText("Agregar Atraccion");
         agregarAtraccionBoton.addActionListener(new java.awt.event.ActionListener() {
@@ -104,18 +138,11 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
                 agregarAtraccionBotonActionPerformed(evt);
             }
         });
-        getContentPane().add(agregarAtraccionBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, -1, -1));
-
-        empleadosDisponibles.setEditable(false);
-        empleadosDisponibles.setColumns(20);
-        empleadosDisponibles.setRows(5);
-        jScrollPane2.setViewportView(empleadosDisponibles);
-
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 70, -1, 145));
+        getContentPane().add(agregarAtraccionBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel5.setText("Categoria");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, -1, 20));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 310, -1, 20));
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel1.setText("Categorias");
@@ -128,7 +155,7 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
                 volverACatalogoActionPerformed(evt);
             }
         });
-        getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 490, -1, -1));
+        getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 500, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel2.setText("Editar e Inactivar Atraccion");
@@ -148,14 +175,7 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel7.setText("Catalogo Atracciones");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, -1, -1));
-
-        categoriasCuadro1.setEditable(false);
-        categoriasCuadro1.setColumns(20);
-        categoriasCuadro1.setRows(5);
-        jScrollPane3.setViewportView(categoriasCuadro1);
-
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, 145));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel8.setText("Empleados Disponibles");
@@ -166,22 +186,63 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
                 empleadoTextoActionPerformed(evt);
             }
         });
-        getContentPane().add(empleadoTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, 230, -1));
+        getContentPane().add(empleadoTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 410, 230, -1));
 
         precioEnTicketesTexto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 precioEnTicketesTextoActionPerformed(evt);
             }
         });
-        getContentPane().add(precioEnTicketesTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 230, -1));
+        getContentPane().add(precioEnTicketesTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 230, -1));
 
         jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel9.setText("Precio en ticketes ");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
+
+        empleadosTabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Nombre", "Descripcion"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane4.setViewportView(empleadosTabla);
+        if (empleadosTabla.getColumnModel().getColumnCount() > 0) {
+            empleadosTabla.getColumnModel().getColumn(0).setResizable(false);
+            empleadosTabla.getColumnModel().getColumn(1).setResizable(false);
+        }
+
+        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 250, 220));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    private void inicializarTablas() {
+        empleadosTableModel = new DefaultTableModel();
+        empleadosTableModel.addColumn("Nombre");
+        empleadosTableModel.addColumn("Estado");
 
+        empleadosTabla.setModel(empleadosTableModel);        
+
+
+        categoriasTableModel = new DefaultTableModel();
+        categoriasTableModel.addColumn("Nombre");
+        categoriasTableModel.addColumn("Descripción");
+        
+        categoriasTabla.setModel(categoriasTableModel);
+        cargarDatosEnTablas();
+    }
     private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
         nombreAtraccionTexto.setText(null);
         categoriasTexto.setText(null);
@@ -196,17 +257,36 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
     }//GEN-LAST:event_categoriasTextoActionPerformed
 
     private void agregarAtraccionBotonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarAtraccionBotonActionPerformed
-        try{
+     try {
         String nombreAtraccion = nombreAtraccionTexto.getText();
         String empleadoAtraccion = empleadoTexto.getText();
         String categoriaAtraccion = categoriasTexto.getText();
         String precioEnTicketes = precioEnTicketesTexto.getText();
-        boolean estadoCategorias = true;
-        
-        if ((nombreAtraccion.equals(""))||(empleadoAtraccion.equals(""))||categoriaAtraccion.equals("")||precioEnTicketes.equals("")) {
-        throw new Exception("Algunos de los campos requeridos no fueron completados");
-        
-        }else{
+
+        boolean empleadoExiste = false;
+        for (Empleado empleado : empleados) {
+            if (empleado.getNombre().equalsIgnoreCase(empleadoAtraccion)) {
+                empleadoExiste = true;
+                break;
+            }
+        }
+
+        boolean categoriaExiste = false;
+        for (Categorias categoria : categoriasAtraccion) {
+            if (categoria.getNombreCategorias().equalsIgnoreCase(categoriaAtraccion)) {
+                categoriaExiste = true;
+                break;
+            }
+        }
+
+        if (nombreAtraccion.isEmpty() || empleadoAtraccion.isEmpty() || categoriaAtraccion.isEmpty() || precioEnTicketes.isEmpty()) {
+            throw new Exception("Algunos de los campos requeridos no fueron completados");
+        } else if (!empleadoExiste) {
+            throw new Exception("El empleado ingresado no existe");
+        } else if (!categoriaExiste) {
+            throw new Exception("La categoría ingresada no existe");
+        } else {
+            
             boolean atraccionExistente = false;
             for (Atracciones atraccion : listaAtracciones) {
                 if (atraccion.getNombreAtraccion().equalsIgnoreCase(nombreAtraccion)) {
@@ -220,19 +300,19 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
                         JOptionPane.ERROR_MESSAGE);
                 return;
             }
-        Atracciones atracciones = new Atracciones();
-        atracciones.setNombreAtraccion(nombreAtraccion);
-        atracciones.setCategoria(categoriaAtraccion);
-        atracciones.setPrecioEnTicketes(precioEnTicketes);
-        atracciones.setEmpleadoACargo(empleadoAtraccion);
-        atracciones.setEstado(estadoCategorias);
-        listaAtracciones.add(atracciones); 
-        guardarEnArchivo();
-        JOptionPane.showMessageDialog(null, "Atraccion Agregada Correctamente");
-        
-    }
-    }catch(Exception e){
-        JOptionPane.showMessageDialog(null, "Error al agregar los datos: " + e.getMessage(), "Error!",JOptionPane.INFORMATION_MESSAGE);
+            
+            Atracciones atracciones = new Atracciones();
+            atracciones.setNombreAtraccion(nombreAtraccion);
+            atracciones.setCategoria(categoriaAtraccion);
+            atracciones.setPrecioEnTicketes(precioEnTicketes);
+            atracciones.setEmpleadoACargo(empleadoAtraccion);
+            atracciones.setEstado(true); // Establece el estado, ajusta según sea necesario
+            listaAtracciones.add(atracciones); 
+            guardarEnArchivo();
+            JOptionPane.showMessageDialog(null, "Atraccion Agregada Correctamente");
+        }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Error al agregar los datos: " + e.getMessage(), "Error!", JOptionPane.INFORMATION_MESSAGE);
     }
     }//GEN-LAST:event_agregarAtraccionBotonActionPerformed
 
@@ -340,17 +420,24 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Error al cargar el archivo: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
-         empleadosDisponibles.setText(""); 
-        for (Empleado empleado : empleados) {
-            empleadosDisponibles.append(empleado.getNombre() + " " + empleado.getApellidos() + "\n");
-        }
-        categoriasCuadro1.setText("");
-        for (Categorias categoria : categoriasAtraccion) {
-            categoriasCuadro1.append(categoria.getNombreCategorias() + " - " + categoria.getCaracteristicasCategorias() + "\n");
-        }
+        cargarDatosEnTablas();
     }
     
-    
+    private void cargarDatosEnTablas() {
+
+        empleadosTableModel.setRowCount(0);
+        categoriasTableModel.setRowCount(0);
+
+        for (Empleado empleado : empleados) {
+            Object[] rowData = {empleado.getNombre(), (empleado.isEstado() ? "Activo" : "Inactivo")};
+            empleadosTableModel.addRow(rowData);
+        }
+
+        for (Categorias categoria : categoriasAtraccion) {
+            Object[] rowData = {categoria.getNombreCategorias(), categoria.getCaracteristicasCategorias()};
+            categoriasTableModel.addRow(rowData);
+        }
+    }
     private Atracciones partesAtracciones(String line) {
         String[] partes = line.split(",");
         if (partes.length >= 5) {
@@ -451,11 +538,11 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton agregarAtraccionBoton;
-    private javax.swing.JTextArea categoriasCuadro1;
+    private javax.swing.JTable categoriasTabla;
     private javax.swing.JTextField categoriasTexto;
     private javax.swing.JButton editarAtraccion;
     private javax.swing.JTextField empleadoTexto;
-    private javax.swing.JTextArea empleadosDisponibles;
+    private javax.swing.JTable empleadosTabla;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -465,8 +552,8 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JButton limpiar;
     private javax.swing.JTextField nombreAtraccionTexto;
     private javax.swing.JTextField precioEnTicketesTexto;

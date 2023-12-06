@@ -2,6 +2,7 @@
 /Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Cliente/Facturacion/IngresosDiarios.java
 /Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Cliente/MenuPrincipalCliente.java
 /Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/CategoriaAtraccion/CatalogoCategoriasDeAtracciones.java
+/Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Cliente/Facturacion/Facturas.java
 /Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Catalogos/Categorias/Categorias.java
 /Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/Catalogos.java
 /Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Personas/Usuario.java
@@ -10,6 +11,8 @@
 /Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Cliente/MenuAtracciones/MenuAtracciones.java
 /Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/Empleados/CatalogoEmpleado.java
 /Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/IniciodeSesionYRegistro/MainClass.java
+/Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Cliente/Facturacion/Confirmacion.java
+/Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Administrador/Ingresos/IngresosDiarios.java
 /Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/Cliente/Facturacion/Facturacion.java
 /Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Jframe/IniciodeSesionYRegistro/InicioDeSesion.java
 /Users/manri/Desktop/Fidelitas/Proyectos_Fidelitas_Tercer_Cuatri/Progra_Cliente_Servidor/SC303_3C2023_G1/SC303_3C2023_G1/src/main/java/Personas/RegistroUsuarios.java

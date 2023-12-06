@@ -4,11 +4,11 @@
  */
 package Jframe.Administrador;
 
-import Catalogos.Personal.Empleado;
 import Jframe.Administrador.Atracciones.CatalogoAtracciones;
 import Jframe.Administrador.CategoriaAtraccion.CatalogoCategoriasDeAtracciones;
 import Jframe.Administrador.Empleados.CatalogoEmpleado;
-import java.util.ArrayList;
+import Jframe.Cliente.Facturacion.IngresosDiarios;
+import Jframe.IniciodeSesionYRegistro.InicioDeSesion;
 
 /**
  *
@@ -38,20 +38,28 @@ public class Catalogos extends javax.swing.JFrame {
         agregarEmpleados = new javax.swing.JButton();
         agregarCategoriaAtraccion = new javax.swing.JButton();
         agregarAtracciones = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        jLabel2.setText("Catalogos");
+        jLabel2.setText("Ingresos Diarios");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 389, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel1.setText("Empleados");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel3.setText("Atracciones");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 210, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel4.setText("Categoria Atraccion");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, -1, -1));
 
         agregarEmpleados.setText("Ir a Catalogo");
         agregarEmpleados.addActionListener(new java.awt.event.ActionListener() {
@@ -59,6 +67,7 @@ public class Catalogos extends javax.swing.JFrame {
                 agregarEmpleadosActionPerformed(evt);
             }
         });
+        getContentPane().add(agregarEmpleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, -1, -1));
 
         agregarCategoriaAtraccion.setText("Ir a Catalogo");
         agregarCategoriaAtraccion.addActionListener(new java.awt.event.ActionListener() {
@@ -66,6 +75,7 @@ public class Catalogos extends javax.swing.JFrame {
                 agregarCategoriaAtraccionActionPerformed(evt);
             }
         });
+        getContentPane().add(agregarCategoriaAtraccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, -1, -1));
 
         agregarAtracciones.setText("Ir a Catalogo");
         agregarAtracciones.addActionListener(new java.awt.event.ActionListener() {
@@ -73,50 +83,27 @@ public class Catalogos extends javax.swing.JFrame {
                 agregarAtraccionesActionPerformed(evt);
             }
         });
+        getContentPane().add(agregarAtracciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 280, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(agregarEmpleados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(agregarCategoriaAtraccion)
-                        .addGap(158, 158, 158))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(126, 126, 126)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(agregarAtracciones)
-                    .addComponent(jLabel3))
-                .addGap(75, 75, 75))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(348, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(342, 342, 342))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel2)
-                .addGap(125, 125, 125)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3))
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(agregarEmpleados)
-                    .addComponent(agregarAtracciones)
-                    .addComponent(agregarCategoriaAtraccion))
-                .addContainerGap(298, Short.MAX_VALUE))
-        );
+        jButton1.setText("Volver a Pantalla de Usuarios");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(515, 537, 237, -1));
+
+        jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel5.setText("Catalogos");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, -1, -1));
+
+        jButton2.setText("Ingresos Diarios");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 460, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -144,6 +131,22 @@ public class Catalogos extends javax.swing.JFrame {
         atracciones.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_agregarAtraccionesActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       InicioDeSesion atracciones = new InicioDeSesion();
+        atracciones.setVisible(true);
+        atracciones.pack();
+        atracciones.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        IngresosDiarios atracciones = new IngresosDiarios();
+        atracciones.setVisible(true);
+        atracciones.pack();
+        atracciones.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -184,9 +187,12 @@ public class Catalogos extends javax.swing.JFrame {
     private javax.swing.JButton agregarAtracciones;
     private javax.swing.JButton agregarCategoriaAtraccion;
     private javax.swing.JButton agregarEmpleados;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
