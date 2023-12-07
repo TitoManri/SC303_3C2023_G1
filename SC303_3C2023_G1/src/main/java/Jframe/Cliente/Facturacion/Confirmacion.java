@@ -34,32 +34,48 @@ public class Confirmacion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
         confirmarBoton = new javax.swing.JButton();
         totalPrecio = new javax.swing.JTextField();
         nombreCliente1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1000, 600));
+        setMinimumSize(new java.awt.Dimension(1000, 600));
+        setPreferredSize(new java.awt.Dimension(1000, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() | java.awt.Font.BOLD, jLabel3.getFont().getSize()+19));
+        jLabel3.setText("Confirmacion de Factura");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, -1));
+
+        confirmarBoton.setFont(confirmarBoton.getFont().deriveFont(confirmarBoton.getFont().getSize()+5f));
         confirmarBoton.setText("Confirmar Compra");
         confirmarBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 confirmarBotonActionPerformed(evt);
             }
         });
-        getContentPane().add(confirmarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 150, -1, -1));
+        getContentPane().add(confirmarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 410, 180, 30));
 
         totalPrecio.setEditable(false);
-        getContentPane().add(totalPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 193, 222, -1));
-        getContentPane().add(nombreCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 222, -1));
+        getContentPane().add(totalPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 222, -1));
+        getContentPane().add(nombreCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 222, -1));
 
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getSize()+5f));
         jLabel1.setText("Total de la Factura");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, -1, -1));
 
+        jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getSize()+5f));
         jLabel2.setText("Nombre de Usuario");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, -1, -1));
+
+        jButton1.setFont(jButton1.getFont().deriveFont(jButton1.getFont().getSize()+5f));
+        jButton1.setText("Volver");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 523, 170, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -135,8 +151,10 @@ public class Confirmacion extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton confirmarBoton;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField nombreCliente1;
     private javax.swing.JTextField totalPrecio;
     // End of variables declaration//GEN-END:variables

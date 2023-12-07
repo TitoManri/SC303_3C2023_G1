@@ -60,10 +60,12 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
         labelTelefono3 = new javax.swing.JLabel();
         labelTelefono4 = new javax.swing.JLabel();
         limpiarEspacios = new javax.swing.JButton();
-        labelTelefono5 = new javax.swing.JLabel();
         labelTelefono6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1000, 600));
+        setMinimumSize(new java.awt.Dimension(1000, 600));
+        setPreferredSize(new java.awt.Dimension(1000, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -91,120 +93,125 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 149, 290, 300));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 160, 360, 370));
 
         telefonoEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 telefonoEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(telefonoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 380, 223, -1));
+        getContentPane().add(telefonoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 223, -1));
 
+        labelTelefono.setFont(labelTelefono.getFont().deriveFont(labelTelefono.getFont().getSize()+5f));
         labelTelefono.setText("Teléfono");
-        getContentPane().add(labelTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 363, -1, -1));
+        getContentPane().add(labelTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
 
         emailEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(emailEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 380, 223, -1));
+        getContentPane().add(emailEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, 223, -1));
 
+        labelEmaill.setFont(labelEmaill.getFont().deriveFont(labelEmaill.getFont().getSize()+5f));
         labelEmaill.setText("Correo Electronico");
-        getContentPane().add(labelEmaill, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 363, -1, -1));
+        getContentPane().add(labelEmaill, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, -1, -1));
 
+        registrarEmpleado.setFont(registrarEmpleado.getFont().deriveFont(registrarEmpleado.getFont().getSize()+3f));
         registrarEmpleado.setText("Registrar Empleado");
         registrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registrarEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(registrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 465, -1, -1));
+        getContentPane().add(registrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, -1, -1));
 
         nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreActionPerformed(evt);
             }
         });
-        getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 190, 223, -1));
+        getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 223, -1));
 
+        labelNombre.setFont(labelNombre.getFont().deriveFont(labelNombre.getFont().getSize()+5f));
         labelNombre.setText("Nombre");
-        getContentPane().add(labelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 167, -1, -1));
+        getContentPane().add(labelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         apellidosEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 apellidosEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(apellidosEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 223, -1));
+        getContentPane().add(apellidosEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 223, -1));
 
+        labelApellidos.setFont(labelApellidos.getFont().deriveFont(labelApellidos.getFont().getSize()+5f));
         labelApellidos.setText("Apellidos");
-        getContentPane().add(labelApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 167, -1, -1));
+        getContentPane().add(labelApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, -1, -1));
 
         cuidadEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cuidadEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(cuidadEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 301, 223, -1));
+        getContentPane().add(cuidadEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 223, -1));
 
+        labelCuidad.setFont(labelCuidad.getFont().deriveFont(labelCuidad.getFont().getSize()+5f));
         labelCuidad.setText("Cuidad");
-        getContentPane().add(labelCuidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 266, -1, -1));
+        getContentPane().add(labelCuidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
 
         direccionEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 direccionEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(direccionEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 301, 223, -1));
+        getContentPane().add(direccionEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 223, -1));
 
+        labelDireccion.setFont(labelDireccion.getFont().deriveFont(labelDireccion.getFont().getSize()+5f));
         labelDireccion.setText("Dirección");
-        getContentPane().add(labelDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 266, -1, -1));
+        getContentPane().add(labelDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, -1, -1));
 
+        volverACatalogo.setFont(volverACatalogo.getFont().deriveFont(volverACatalogo.getFont().getSize()+5f));
         volverACatalogo.setText("Volver a Catalogo");
         volverACatalogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 volverACatalogoActionPerformed(evt);
             }
         });
-        getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(887, 577, -1, -1));
+        getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 560, -1, -1));
 
-        labelTelefono1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        labelTelefono1.setText("Editar e Inactivar Empleado");
-        getContentPane().add(labelTelefono1, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 526, -1, -1));
+        labelTelefono1.setFont(labelTelefono1.getFont().deriveFont(labelTelefono1.getFont().getSize()+11f));
+        labelTelefono1.setText("Editar e Inactivar Empleado ->");
+        getContentPane().add(labelTelefono1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, -1));
 
-        editarEmpleado.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        editarEmpleado.setFont(editarEmpleado.getFont().deriveFont(editarEmpleado.getFont().getSize()+3f));
         editarEmpleado.setText("Editar");
         editarEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editarEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(editarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(452, 527, -1, -1));
+        getContentPane().add(editarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 520, 160, 30));
 
-        labelTelefono3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        labelTelefono3.setFont(labelTelefono3.getFont().deriveFont(labelTelefono3.getFont().getSize()+11f));
         labelTelefono3.setText("Agregar Nuevo Empleado");
-        getContentPane().add(labelTelefono3, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 113, -1, -1));
+        getContentPane().add(labelTelefono3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, -1, -1));
 
         labelTelefono4.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
         labelTelefono4.setText("Catalogo Empleado");
-        getContentPane().add(labelTelefono4, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 24, -1, -1));
+        getContentPane().add(labelTelefono4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, -1, -1));
 
+        limpiarEspacios.setFont(limpiarEspacios.getFont().deriveFont(limpiarEspacios.getFont().getSize()+3f));
         limpiarEspacios.setText("Limpiar");
         limpiarEspacios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 limpiarEspaciosActionPerformed(evt);
             }
         });
-        getContentPane().add(limpiarEspacios, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 465, 118, -1));
+        getContentPane().add(limpiarEspacios, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 160, -1));
 
-        labelTelefono5.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        labelTelefono5.setText("->");
-        getContentPane().add(labelTelefono5, new org.netbeans.lib.awtextra.AbsoluteConstraints(416, 526, -1, -1));
-
-        labelTelefono6.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        labelTelefono6.setFont(labelTelefono6.getFont().deriveFont(labelTelefono6.getFont().getSize()+11f));
         labelTelefono6.setText("Lista Empleado");
-        getContentPane().add(labelTelefono6, new org.netbeans.lib.awtextra.AbsoluteConstraints(802, 92, -1, -1));
+        getContentPane().add(labelTelefono6, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 110, -1, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -523,7 +530,6 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
     private javax.swing.JLabel labelTelefono1;
     private javax.swing.JLabel labelTelefono3;
     private javax.swing.JLabel labelTelefono4;
-    private javax.swing.JLabel labelTelefono5;
     private javax.swing.JLabel labelTelefono6;
     private javax.swing.JButton limpiarEspacios;
     private javax.swing.JTextField nombre;

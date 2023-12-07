@@ -41,14 +41,20 @@ public class IngresosDiarios extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        totalTexto = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1000, 600));
+        setMinimumSize(new java.awt.Dimension(1000, 600));
+        setPreferredSize(new java.awt.Dimension(1000, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 210, -1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 360, -1));
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
-        jLabel1.setText("Ingresos Diarios");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, jLabel1.getFont().getSize()+19));
+        jLabel1.setText("Total ->");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, -1, -1));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -75,36 +81,77 @@ public class IngresosDiarios extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, 300, 240));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 380, 310));
 
+        jButton1.setFont(jButton1.getFont().deriveFont(jButton1.getFont().getSize()+5f));
         jButton1.setText("Actualizar Tabla");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, -1, -1));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 180, -1));
 
-        jLabel2.setText("Formato: ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
+        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        jLabel2.setText("Formato:  yyyy-mm-dd");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, -1, 20));
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel3.setText("Ingrese el dia:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+        jLabel3.setText("Ingrese el dia");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
+
+        jButton2.setFont(jButton2.getFont().deriveFont(jButton2.getFont().getSize()+5f));
+        jButton2.setText("Volver ");
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, 150, -1));
+
+        jLabel4.setFont(jLabel4.getFont().deriveFont(jLabel4.getFont().getStyle() | java.awt.Font.BOLD, jLabel4.getFont().getSize()+19));
+        jLabel4.setText("Ingresos");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, -1, -1));
+
+        totalTexto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                totalTextoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(totalTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 510, 350, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void totalTextoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalTextoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_totalTextoActionPerformed
     private void buscarIngresosPorFecha() {
-        modeloTabla.setRowCount(0); 
+        modeloTabla.setRowCount(0);
+        totalTexto.setText(""); 
+
         String fechaIngresada = jTextField1.getText();
-        
+        double totalIngresos = 0.0;
+
         try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/BaseDeDatos/Ingresos.txt"))) {
             String linea;
             while ((linea = br.readLine()) != null) {
                 String[] datos = linea.split(",");
                 if (datos.length >= 3 && datos[2].startsWith(fechaIngresada)) {
                     modeloTabla.addRow(new Object[]{datos[0], datos[1]});
+                    totalIngresos += Double.parseDouble(datos[1]);
                 }
             }
+
+            // Mostrar el total en el JTextArea
+            totalTexto.setText("Total de ingresos: $" + totalIngresos);
         } catch (IOException e) {
             JOptionPane.showMessageDialog(this, "Error al leer el archivo de ingresos: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Error al convertir el monto a número: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }
+}
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -142,11 +189,14 @@ public class IngresosDiarios extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField totalTexto;
     // End of variables declaration//GEN-END:variables
 }

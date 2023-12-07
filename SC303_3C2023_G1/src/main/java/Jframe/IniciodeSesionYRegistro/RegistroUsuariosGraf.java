@@ -43,52 +43,70 @@ public class RegistroUsuariosGraf extends javax.swing.JFrame {
         inactivatBot = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1000, 600));
+        setMinimumSize(new java.awt.Dimension(1000, 600));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, jLabel1.getFont().getSize()+21));
         jLabel1.setText("Registro Usuarios");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 26, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getStyle() | java.awt.Font.BOLD, jLabel2.getFont().getSize()+11));
         jLabel2.setText("Agregar nuevo usuario");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
 
+        labelNombreUsuario.setFont(labelNombreUsuario.getFont().deriveFont(labelNombreUsuario.getFont().getSize()+5f));
         labelNombreUsuario.setText("Nombre");
+        getContentPane().add(labelNombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, -1, -1));
 
         nombreUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreUsuarioActionPerformed(evt);
             }
         });
+        getContentPane().add(nombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 210, -1));
 
+        labelApellidosUsuario.setFont(labelApellidosUsuario.getFont().deriveFont(labelApellidosUsuario.getFont().getSize()+5f));
         labelApellidosUsuario.setText("Apellidos");
+        getContentPane().add(labelApellidosUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, -1, -1));
 
         apellidosUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 apellidosUsuarioActionPerformed(evt);
             }
         });
+        getContentPane().add(apellidosUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, 230, -1));
 
-        labelNicknameUsuario.setText("Nickname");
+        labelNicknameUsuario.setFont(labelNicknameUsuario.getFont().deriveFont(labelNicknameUsuario.getFont().getSize()+5f));
+        labelNicknameUsuario.setText("Nombre de Usuario");
+        getContentPane().add(labelNicknameUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
 
         nicknameUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nicknameUsuarioActionPerformed(evt);
             }
         });
+        getContentPane().add(nicknameUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 210, -1));
 
+        labelContUsuario.setFont(labelContUsuario.getFont().deriveFont(labelContUsuario.getFont().getSize()+5f));
         labelContUsuario.setText("Contraseña");
+        getContentPane().add(labelContUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, -1, -1));
 
         contUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contUsuarioActionPerformed(evt);
             }
         });
+        getContentPane().add(contUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, 230, -1));
 
-        registrarUsuarioBot.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        registrarUsuarioBot.setFont(registrarUsuarioBot.getFont().deriveFont(registrarUsuarioBot.getFont().getSize()+3f));
         registrarUsuarioBot.setText("Registrar");
         registrarUsuarioBot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registrarUsuarioBotActionPerformed(evt);
             }
         });
+        getContentPane().add(registrarUsuarioBot, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, 160, 40));
 
         botonVolver.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         botonVolver.setText("Volver");
@@ -97,107 +115,31 @@ public class RegistroUsuariosGraf extends javax.swing.JFrame {
                 botonVolverActionPerformed(evt);
             }
         });
+        getContentPane().add(botonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 520, 160, 30));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() | java.awt.Font.BOLD, jLabel3.getFont().getSize()+11));
         jLabel3.setText("Inactivar Usuario");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 120, -1, -1));
 
         inactivarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inactivarUsuarioActionPerformed(evt);
             }
         });
+        getContentPane().add(inactivarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 310, 175, -1));
 
-        jLabel4.setText("Ingrese el nickname:");
+        jLabel4.setFont(jLabel4.getFont().deriveFont(jLabel4.getFont().getSize()+5f));
+        jLabel4.setText("Nombre de Usuario");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, -1, 22));
 
-        inactivatBot.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        inactivatBot.setFont(inactivatBot.getFont().deriveFont(inactivatBot.getFont().getSize()+3f));
         inactivatBot.setText("Inactivar");
         inactivatBot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inactivatBotActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(botonVolver)
-                .addGap(99, 99, 99))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(labelNombreUsuario)
-                            .addComponent(nombreUsuario)
-                            .addComponent(labelNicknameUsuario)
-                            .addComponent(nicknameUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE))
-                        .addGap(136, 136, 136)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelApellidosUsuario)
-                            .addComponent(apellidosUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelContUsuario)
-                            .addComponent(contUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(107, 107, 107)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(18, 18, 18)
-                                .addComponent(inactivarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel3)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(287, 287, 287)
-                        .addComponent(registrarUsuarioBot)))
-                .addContainerGap(63, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(inactivatBot)
-                .addGap(276, 276, 276))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(botonVolver))
-                .addGap(42, 42, 42)
-                .addComponent(jLabel2)
-                .addGap(40, 40, 40)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelNombreUsuario)
-                    .addComponent(labelApellidosUsuario))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(apellidosUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelNicknameUsuario)
-                    .addComponent(labelContUsuario))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nicknameUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(contUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(46, 46, 46)
-                .addComponent(registrarUsuarioBot)
-                .addGap(22, 22, 22)
-                .addComponent(jLabel3)
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inactivarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addComponent(inactivatBot)
-                .addContainerGap(51, Short.MAX_VALUE))
-        );
+        getContentPane().add(inactivatBot, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 440, 140, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

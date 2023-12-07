@@ -64,8 +64,12 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         limpiarCategoria = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1000, 600));
+        setMinimumSize(new java.awt.Dimension(1000, 600));
+        setPreferredSize(new java.awt.Dimension(1000, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -93,28 +97,29 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 72, 270, 282));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 120, 370, 400));
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getSize()+5f));
         jLabel1.setText("Nombre de la Categoria");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 128, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getSize()+5f));
         jLabel2.setText("Caracteristicas de la Categoria");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 193, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, -1, -1));
 
         caracteristicasCategoria.setColumns(5);
         caracteristicasCategoria.setFont(new java.awt.Font("Monospaced", 0, 13)); // NOI18N
-        getContentPane().add(caracteristicasCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 234, 234, -1));
+        getContentPane().add(caracteristicasCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 250, -1));
 
+        agregarCategoriaBoton.setFont(agregarCategoriaBoton.getFont().deriveFont(agregarCategoriaBoton.getFont().getSize()+3f));
         agregarCategoriaBoton.setText("Agregar Categoria");
         agregarCategoriaBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agregarCategoriaBotonActionPerformed(evt);
             }
         });
-        getContentPane().add(agregarCategoriaBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 435, -1, -1));
-        getContentPane().add(nombreCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 164, 234, -1));
+        getContentPane().add(agregarCategoriaBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 350, 180, 30));
+        getContentPane().add(nombreCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 234, -1));
 
         volverACatalogo.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         volverACatalogo.setText("Volver a Catalogo");
@@ -123,7 +128,7 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
                 volverACatalogoActionPerformed(evt);
             }
         });
-        getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 512, 209, -1));
+        getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 540, 250, -1));
 
         editarCategoria.setText("Editar");
         editarCategoria.addActionListener(new java.awt.event.ActionListener() {
@@ -131,27 +136,32 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
                 editarCategoriaActionPerformed(evt);
             }
         });
-        getContentPane().add(editarCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(413, 435, 169, -1));
+        getContentPane().add(editarCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 470, 169, -1));
 
-        jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel4.setText("Editar e Inactivar Categoria");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 394, -1, -1));
+        jLabel4.setFont(jLabel4.getFont().deriveFont(jLabel4.getFont().getStyle() | java.awt.Font.BOLD, jLabel4.getFont().getSize()+5));
+        jLabel4.setText("Agregar Categoria");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        jLabel5.setFont(jLabel5.getFont().deriveFont(jLabel5.getFont().getStyle() | java.awt.Font.BOLD, jLabel5.getFont().getSize()+19));
         jLabel5.setText("Catalogo Categorias");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 36, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
 
+        limpiarCategoria.setFont(limpiarCategoria.getFont().deriveFont(limpiarCategoria.getFont().getSize()+3f));
         limpiarCategoria.setText("Limpiar");
         limpiarCategoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 limpiarCategoriaActionPerformed(evt);
             }
         });
-        getContentPane().add(limpiarCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 435, -1, -1));
+        getContentPane().add(limpiarCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, 180, 30));
 
-        jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel6.setFont(jLabel6.getFont().deriveFont(jLabel6.getFont().getStyle() | java.awt.Font.BOLD, jLabel6.getFont().getSize()+11));
         jLabel6.setText("Lista Categorias");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 70, -1, -1));
+
+        jLabel7.setFont(jLabel7.getFont().deriveFont(jLabel7.getFont().getStyle() | java.awt.Font.BOLD, jLabel7.getFont().getSize()+5));
+        jLabel7.setText("Editar e Inactivar Categoria ->");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -382,6 +392,7 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JButton limpiarCategoria;

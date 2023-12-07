@@ -100,7 +100,7 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
             categoriasTabla.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 60, 250, 230));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 120, 220, -1));
 
         limpiar.setText("Limpiar");
         limpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -108,29 +108,29 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
                 limpiarActionPerformed(evt);
             }
         });
-        getContentPane().add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 84, -1));
+        getContentPane().add(limpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 140, 30));
 
         nombreAtraccionTexto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreAtraccionTextoActionPerformed(evt);
             }
         });
-        getContentPane().add(nombreAtraccionTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 230, -1));
+        getContentPane().add(nombreAtraccionTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 190, -1));
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel3.setText("Nombre Atraccion");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel4.setText("Empleado");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, -1, -1));
 
         categoriasTexto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 categoriasTextoActionPerformed(evt);
             }
         });
-        getContentPane().add(categoriasTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 340, 220, 20));
+        getContentPane().add(categoriasTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 180, 20));
 
         agregarAtraccionBoton.setText("Agregar Atraccion");
         agregarAtraccionBoton.addActionListener(new java.awt.event.ActionListener() {
@@ -138,15 +138,15 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
                 agregarAtraccionBotonActionPerformed(evt);
             }
         });
-        getContentPane().add(agregarAtraccionBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 350, -1, -1));
+        getContentPane().add(agregarAtraccionBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 150, 30));
 
         jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel5.setText("Categoria");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 310, -1, 20));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, -1, 20));
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getSize()+9f));
         jLabel1.setText("Categorias");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 80, -1, -1));
 
         volverACatalogo.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         volverACatalogo.setText("Volver a Catalogo");
@@ -155,15 +155,15 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
                 volverACatalogoActionPerformed(evt);
             }
         });
-        getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 500, -1, -1));
+        getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel2.setText("Editar e Inactivar Atraccion");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 500, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 28)); // NOI18N
         jLabel6.setText("->");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 490, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, -1, -1));
 
         editarAtraccion.setText("Editar");
         editarAtraccion.addActionListener(new java.awt.event.ActionListener() {
@@ -171,33 +171,33 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
                 editarAtraccionActionPerformed(evt);
             }
         });
-        getContentPane().add(editarAtraccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 500, 84, -1));
+        getContentPane().add(editarAtraccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 420, 140, 30));
 
-        jLabel7.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel7.setFont(jLabel7.getFont().deriveFont(jLabel7.getFont().getStyle() | java.awt.Font.BOLD, jLabel7.getFont().getSize()+19));
         jLabel7.setText("Catalogo Atracciones");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel8.setFont(jLabel8.getFont().deriveFont(jLabel8.getFont().getSize()+9f));
         jLabel8.setText("Empleados Disponibles");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 30, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, -1, 20));
 
         empleadoTexto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 empleadoTextoActionPerformed(evt);
             }
         });
-        getContentPane().add(empleadoTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 410, 230, -1));
+        getContentPane().add(empleadoTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 180, -1));
 
         precioEnTicketesTexto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 precioEnTicketesTextoActionPerformed(evt);
             }
         });
-        getContentPane().add(precioEnTicketesTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 230, -1));
+        getContentPane().add(precioEnTicketesTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 190, -1));
 
         jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel9.setText("Precio en ticketes ");
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
 
         empleadosTabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -224,7 +224,7 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
             empleadosTabla.getColumnModel().getColumn(1).setResizable(false);
         }
 
-        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 250, 220));
+        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 120, 220, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

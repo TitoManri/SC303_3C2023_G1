@@ -24,66 +24,57 @@ public class InicioDeSesion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
         irACatalogo = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         irAFacturacion = new javax.swing.JButton();
+        inicioDeSesion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1000, 600));
+        setMinimumSize(new java.awt.Dimension(1000, 600));
+        setPreferredSize(new java.awt.Dimension(1000, 600));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() | java.awt.Font.BOLD, jLabel3.getFont().getSize()+23));
+        jLabel3.setText("Elige el tipo de Usuario");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, 40));
+
+        irACatalogo.setFont(irACatalogo.getFont().deriveFont((float)18));
         irACatalogo.setText("Ir a Catalogo");
         irACatalogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 irACatalogoActionPerformed(evt);
             }
         });
+        getContentPane().add(irACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 200, 60));
 
-        jLabel1.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        jLabel1.setText("Administrador:");
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, jLabel1.getFont().getSize()+11));
+        jLabel1.setText("Administrador");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, 30));
 
-        jLabel2.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        jLabel2.setText("Usuario:");
+        jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getStyle() | java.awt.Font.BOLD, jLabel2.getFont().getSize()+11));
+        jLabel2.setText("Usuario");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 250, -1, -1));
 
+        irAFacturacion.setFont(irAFacturacion.getFont().deriveFont(irAFacturacion.getFont().getSize()+5f));
         irAFacturacion.setText("Ir a facturacion");
         irAFacturacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 irAFacturacionActionPerformed(evt);
             }
         });
+        getContentPane().add(irAFacturacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 320, 190, 60));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(286, 286, 286)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(278, 278, 278)
-                        .addComponent(jLabel2)))
-                .addContainerGap(397, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(irAFacturacion, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(irACatalogo, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(153, 153, 153)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(irACatalogo, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(irAFacturacion, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(229, Short.MAX_VALUE))
-        );
+        inicioDeSesion.setFont(inicioDeSesion.getFont().deriveFont(inicioDeSesion.getFont().getSize()+5f));
+        inicioDeSesion.setText("Volver a Inicio de Sesion");
+        inicioDeSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inicioDeSesionActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inicioDeSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 530, 270, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -104,6 +95,10 @@ public class InicioDeSesion extends javax.swing.JFrame {
         fact1.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_irAFacturacionActionPerformed
+
+    private void inicioDeSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inicioDeSesionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inicioDeSesionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,9 +137,11 @@ public class InicioDeSesion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton inicioDeSesion;
     private javax.swing.JButton irACatalogo;
     private javax.swing.JButton irAFacturacion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

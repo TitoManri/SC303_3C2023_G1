@@ -30,17 +30,25 @@ public class Inicio extends javax.swing.JFrame {
         inicioDeSesion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1000, 600));
+        setMinimumSize(new java.awt.Dimension(1000, 600));
+        setPreferredSize(new java.awt.Dimension(1000, 600));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, jLabel1.getFont().getSize()+17));
         jLabel1.setText("Bienvenidos al Parque de Diversiones");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, -1, -1));
 
         registro.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         registro.setText("Registro");
+        registro.setMaximumSize(new java.awt.Dimension(165, 28));
+        registro.setMinimumSize(new java.awt.Dimension(165, 28));
         registro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registroActionPerformed(evt);
             }
         });
+        getContentPane().add(registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, 230, 60));
 
         inicioDeSesion.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
         inicioDeSesion.setText("Inicio de Sesion");
@@ -49,32 +57,7 @@ public class Inicio extends javax.swing.JFrame {
                 inicioDeSesionActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(196, 196, 196)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(inicioDeSesion)
-                        .addGap(137, 137, 137)
-                        .addComponent(registro))
-                    .addComponent(jLabel1))
-                .addGap(239, 239, 239))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(203, 203, 203)
-                .addComponent(jLabel1)
-                .addGap(138, 138, 138)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(registro)
-                    .addComponent(inicioDeSesion))
-                .addGap(213, 213, 213))
-        );
+        getContentPane().add(inicioDeSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 226, 60));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
