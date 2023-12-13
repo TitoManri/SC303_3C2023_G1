@@ -1,2 +1,2 @@
 Boomerang,Divertida,Manrique,12,true
-GoKarts,Divertida,Manrique,12,true
+GoKarts,Divertida,Joel,12,true
