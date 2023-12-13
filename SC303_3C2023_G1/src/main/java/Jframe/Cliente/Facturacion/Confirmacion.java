@@ -41,6 +41,7 @@ public class Confirmacion extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(1000, 600));
@@ -49,33 +50,57 @@ public class Confirmacion extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() | java.awt.Font.BOLD, jLabel3.getFont().getSize()+19));
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Confirmacion de Factura");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, -1, -1));
 
+        confirmarBoton.setBackground(new java.awt.Color(255, 255, 255));
         confirmarBoton.setFont(confirmarBoton.getFont().deriveFont(confirmarBoton.getFont().getSize()+5f));
+        confirmarBoton.setForeground(new java.awt.Color(0, 0, 0));
         confirmarBoton.setText("Confirmar Compra");
+        confirmarBoton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         confirmarBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 confirmarBotonActionPerformed(evt);
             }
         });
-        getContentPane().add(confirmarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 410, 180, 30));
+        getContentPane().add(confirmarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 420, 180, 30));
 
         totalPrecio.setEditable(false);
-        getContentPane().add(totalPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 222, -1));
-        getContentPane().add(nombreCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 222, -1));
+        totalPrecio.setBackground(new java.awt.Color(255, 255, 255));
+        totalPrecio.setForeground(new java.awt.Color(0, 0, 0));
+        totalPrecio.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        getContentPane().add(totalPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, 222, -1));
+
+        nombreCliente1.setBackground(new java.awt.Color(255, 255, 255));
+        nombreCliente1.setForeground(new java.awt.Color(0, 0, 0));
+        nombreCliente1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        getContentPane().add(nombreCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 222, -1));
 
         jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getSize()+5f));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Total de la Factura");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
 
         jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getSize()+5f));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Nombre de Usuario");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(jButton1.getFont().deriveFont(jButton1.getFont().getSize()+5f));
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Volver");
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 523, 170, 30));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -104,6 +129,14 @@ public class Confirmacion extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Error al guardar los datos: " + e.getMessage(), "Error!", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_confirmarBotonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Facturacion inicio2 = new Facturacion();
+        inicio2.setVisible(true);
+        inicio2.pack();
+        inicio2.setLocationRelativeTo(null); 
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
    
     private String obtenerFechaFormateada() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -155,6 +188,7 @@ public class Confirmacion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JTextField nombreCliente1;
     private javax.swing.JTextField totalPrecio;
     // End of variables declaration//GEN-END:variables

@@ -65,11 +65,10 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
         limpiarCategoria = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1000, 600));
         setMinimumSize(new java.awt.Dimension(1000, 600));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -100,29 +99,44 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 120, 370, 400));
 
         jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getSize()+5f));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Nombre de la Categoria");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
         jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getSize()+5f));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Caracteristicas de la Categoria");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, -1, -1));
 
+        caracteristicasCategoria.setBackground(new java.awt.Color(255, 255, 255));
         caracteristicasCategoria.setColumns(5);
         caracteristicasCategoria.setFont(new java.awt.Font("Monospaced", 0, 13)); // NOI18N
+        caracteristicasCategoria.setForeground(new java.awt.Color(0, 0, 0));
+        caracteristicasCategoria.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(caracteristicasCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 250, -1));
 
+        agregarCategoriaBoton.setBackground(new java.awt.Color(255, 255, 255));
         agregarCategoriaBoton.setFont(agregarCategoriaBoton.getFont().deriveFont(agregarCategoriaBoton.getFont().getSize()+3f));
+        agregarCategoriaBoton.setForeground(new java.awt.Color(0, 0, 0));
         agregarCategoriaBoton.setText("Agregar Categoria");
+        agregarCategoriaBoton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         agregarCategoriaBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agregarCategoriaBotonActionPerformed(evt);
             }
         });
         getContentPane().add(agregarCategoriaBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 350, 180, 30));
+
+        nombreCategoria.setBackground(new java.awt.Color(255, 255, 255));
+        nombreCategoria.setForeground(new java.awt.Color(0, 0, 0));
+        nombreCategoria.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         getContentPane().add(nombreCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 234, -1));
 
+        volverACatalogo.setBackground(new java.awt.Color(255, 255, 255));
         volverACatalogo.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        volverACatalogo.setForeground(new java.awt.Color(0, 0, 0));
         volverACatalogo.setText("Volver a Catalogo");
+        volverACatalogo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         volverACatalogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 volverACatalogoActionPerformed(evt);
@@ -130,7 +144,10 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
         });
         getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 540, 250, -1));
 
+        editarCategoria.setBackground(new java.awt.Color(255, 255, 255));
+        editarCategoria.setForeground(new java.awt.Color(0, 0, 0));
         editarCategoria.setText("Editar");
+        editarCategoria.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         editarCategoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editarCategoriaActionPerformed(evt);
@@ -138,16 +155,21 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
         });
         getContentPane().add(editarCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 470, 169, -1));
 
-        jLabel4.setFont(jLabel4.getFont().deriveFont(jLabel4.getFont().getStyle() | java.awt.Font.BOLD, jLabel4.getFont().getSize()+5));
+        jLabel4.setFont(jLabel4.getFont().deriveFont(jLabel4.getFont().getStyle() | java.awt.Font.BOLD, jLabel4.getFont().getSize()+11));
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Agregar Categoria");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
 
         jLabel5.setFont(jLabel5.getFont().deriveFont(jLabel5.getFont().getStyle() | java.awt.Font.BOLD, jLabel5.getFont().getSize()+19));
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Catalogo Categorias");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
 
+        limpiarCategoria.setBackground(new java.awt.Color(255, 255, 255));
         limpiarCategoria.setFont(limpiarCategoria.getFont().deriveFont(limpiarCategoria.getFont().getSize()+3f));
+        limpiarCategoria.setForeground(new java.awt.Color(0, 0, 0));
         limpiarCategoria.setText("Limpiar");
+        limpiarCategoria.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         limpiarCategoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 limpiarCategoriaActionPerformed(evt);
@@ -156,12 +178,17 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
         getContentPane().add(limpiarCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, 180, 30));
 
         jLabel6.setFont(jLabel6.getFont().deriveFont(jLabel6.getFont().getStyle() | java.awt.Font.BOLD, jLabel6.getFont().getSize()+11));
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Lista Categorias");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 70, -1, -1));
 
         jLabel7.setFont(jLabel7.getFont().deriveFont(jLabel7.getFont().getStyle() | java.awt.Font.BOLD, jLabel7.getFont().getSize()+5));
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Editar e Inactivar Categoria ->");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -389,6 +416,7 @@ public class CatalogoCategoriasDeAtracciones extends javax.swing.JFrame {
     private javax.swing.JButton editarCategoria;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

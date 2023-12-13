@@ -24,57 +24,53 @@ public class InicioDeSesion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
         irACatalogo = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         irAFacturacion = new javax.swing.JButton();
         inicioDeSesion = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1000, 600));
         setMinimumSize(new java.awt.Dimension(1000, 600));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() | java.awt.Font.BOLD, jLabel3.getFont().getSize()+23));
-        jLabel3.setText("Elige el tipo de Usuario");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, -1, 40));
-
-        irACatalogo.setFont(irACatalogo.getFont().deriveFont((float)18));
-        irACatalogo.setText("Ir a Catalogo");
+        irACatalogo.setBackground(new java.awt.Color(255, 255, 255));
+        irACatalogo.setFont(irACatalogo.getFont().deriveFont(irACatalogo.getFont().getStyle() | java.awt.Font.BOLD, irACatalogo.getFont().getSize()+11));
+        irACatalogo.setForeground(new java.awt.Color(0, 0, 0));
+        irACatalogo.setText("Administrador");
+        irACatalogo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         irACatalogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 irACatalogoActionPerformed(evt);
             }
         });
-        getContentPane().add(irACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 200, 60));
+        getContentPane().add(irACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, 200, 60));
 
-        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, jLabel1.getFont().getSize()+11));
-        jLabel1.setText("Administrador");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, 30));
-
-        jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getStyle() | java.awt.Font.BOLD, jLabel2.getFont().getSize()+11));
-        jLabel2.setText("Usuario");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 250, -1, -1));
-
-        irAFacturacion.setFont(irAFacturacion.getFont().deriveFont(irAFacturacion.getFont().getSize()+5f));
-        irAFacturacion.setText("Ir a facturacion");
+        irAFacturacion.setBackground(new java.awt.Color(255, 255, 255));
+        irAFacturacion.setFont(irAFacturacion.getFont().deriveFont(irAFacturacion.getFont().getStyle() | java.awt.Font.BOLD, irAFacturacion.getFont().getSize()+11));
+        irAFacturacion.setForeground(new java.awt.Color(0, 0, 0));
+        irAFacturacion.setText("Usuario");
+        irAFacturacion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         irAFacturacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 irAFacturacionActionPerformed(evt);
             }
         });
-        getContentPane().add(irAFacturacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 320, 190, 60));
+        getContentPane().add(irAFacturacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 320, 190, 60));
 
+        inicioDeSesion.setBackground(new java.awt.Color(255, 255, 255));
         inicioDeSesion.setFont(inicioDeSesion.getFont().deriveFont(inicioDeSesion.getFont().getSize()+5f));
+        inicioDeSesion.setForeground(new java.awt.Color(0, 0, 0));
         inicioDeSesion.setText("Volver a Inicio de Sesion");
+        inicioDeSesion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         inicioDeSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inicioDeSesionActionPerformed(evt);
             }
         });
-        getContentPane().add(inicioDeSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 530, 270, 40));
+        getContentPane().add(inicioDeSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 520, 270, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tipoUsuario.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -97,7 +93,11 @@ public class InicioDeSesion extends javax.swing.JFrame {
     }//GEN-LAST:event_irAFacturacionActionPerformed
 
     private void inicioDeSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inicioDeSesionActionPerformed
-        // TODO add your handling code here:
+        Inicio2 sesion1 = new Inicio2();
+        sesion1.setVisible(true);
+        sesion1.pack();
+        sesion1.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_inicioDeSesionActionPerformed
 
     /**
@@ -141,7 +141,5 @@ public class InicioDeSesion extends javax.swing.JFrame {
     private javax.swing.JButton irACatalogo;
     private javax.swing.JButton irAFacturacion;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

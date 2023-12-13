@@ -25,22 +25,19 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
         registro = new javax.swing.JButton();
         inicioDeSesion = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1000, 600));
         setMinimumSize(new java.awt.Dimension(1000, 600));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, jLabel1.getFont().getSize()+17));
-        jLabel1.setText("Bienvenidos al Parque de Diversiones");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, -1, -1));
-
-        registro.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        registro.setBackground(new java.awt.Color(255, 255, 255));
+        registro.setFont(registro.getFont().deriveFont(registro.getFont().getSize()+5f));
+        registro.setForeground(new java.awt.Color(0, 0, 0));
         registro.setText("Registro");
+        registro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         registro.setMaximumSize(new java.awt.Dimension(165, 28));
         registro.setMinimumSize(new java.awt.Dimension(165, 28));
         registro.addActionListener(new java.awt.event.ActionListener() {
@@ -50,14 +47,20 @@ public class Inicio extends javax.swing.JFrame {
         });
         getContentPane().add(registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, 230, 60));
 
+        inicioDeSesion.setBackground(new java.awt.Color(255, 255, 255));
         inicioDeSesion.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
+        inicioDeSesion.setForeground(new java.awt.Color(0, 0, 0));
         inicioDeSesion.setText("Inicio de Sesion");
+        inicioDeSesion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         inicioDeSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inicioDeSesionActionPerformed(evt);
             }
         });
         getContentPane().add(inicioDeSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 226, 60));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inicio.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -84,7 +87,7 @@ public class Inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton inicioDeSesion;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JButton registro;
     // End of variables declaration//GEN-END:variables
 }

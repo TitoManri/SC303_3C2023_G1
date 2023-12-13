@@ -41,24 +41,30 @@ public class RegistroUsuariosGraf extends javax.swing.JFrame {
         inactivarUsuario = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         inactivatBot = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1000, 600));
         setMinimumSize(new java.awt.Dimension(1000, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, jLabel1.getFont().getSize()+21));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Registro Usuarios");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 26, -1, -1));
 
         jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getStyle() | java.awt.Font.BOLD, jLabel2.getFont().getSize()+11));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Agregar nuevo usuario");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, -1, -1));
 
         labelNombreUsuario.setFont(labelNombreUsuario.getFont().deriveFont(labelNombreUsuario.getFont().getSize()+5f));
+        labelNombreUsuario.setForeground(new java.awt.Color(0, 0, 0));
         labelNombreUsuario.setText("Nombre");
         getContentPane().add(labelNombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, -1, -1));
 
+        nombreUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        nombreUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        nombreUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         nombreUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreUsuarioActionPerformed(evt);
@@ -67,9 +73,13 @@ public class RegistroUsuariosGraf extends javax.swing.JFrame {
         getContentPane().add(nombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 210, -1));
 
         labelApellidosUsuario.setFont(labelApellidosUsuario.getFont().deriveFont(labelApellidosUsuario.getFont().getSize()+5f));
+        labelApellidosUsuario.setForeground(new java.awt.Color(0, 0, 0));
         labelApellidosUsuario.setText("Apellidos");
         getContentPane().add(labelApellidosUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, -1, -1));
 
+        apellidosUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        apellidosUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        apellidosUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         apellidosUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 apellidosUsuarioActionPerformed(evt);
@@ -78,9 +88,13 @@ public class RegistroUsuariosGraf extends javax.swing.JFrame {
         getContentPane().add(apellidosUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 260, 230, -1));
 
         labelNicknameUsuario.setFont(labelNicknameUsuario.getFont().deriveFont(labelNicknameUsuario.getFont().getSize()+5f));
+        labelNicknameUsuario.setForeground(new java.awt.Color(0, 0, 0));
         labelNicknameUsuario.setText("Nombre de Usuario");
         getContentPane().add(labelNicknameUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, -1, -1));
 
+        nicknameUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        nicknameUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        nicknameUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         nicknameUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nicknameUsuarioActionPerformed(evt);
@@ -89,9 +103,13 @@ public class RegistroUsuariosGraf extends javax.swing.JFrame {
         getContentPane().add(nicknameUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 210, -1));
 
         labelContUsuario.setFont(labelContUsuario.getFont().deriveFont(labelContUsuario.getFont().getSize()+5f));
+        labelContUsuario.setForeground(new java.awt.Color(0, 0, 0));
         labelContUsuario.setText("Contraseña");
         getContentPane().add(labelContUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, -1, -1));
 
+        contUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        contUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        contUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         contUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contUsuarioActionPerformed(evt);
@@ -99,8 +117,11 @@ public class RegistroUsuariosGraf extends javax.swing.JFrame {
         });
         getContentPane().add(contUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, 230, -1));
 
+        registrarUsuarioBot.setBackground(new java.awt.Color(255, 255, 255));
         registrarUsuarioBot.setFont(registrarUsuarioBot.getFont().deriveFont(registrarUsuarioBot.getFont().getSize()+3f));
+        registrarUsuarioBot.setForeground(new java.awt.Color(0, 0, 0));
         registrarUsuarioBot.setText("Registrar");
+        registrarUsuarioBot.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         registrarUsuarioBot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registrarUsuarioBotActionPerformed(evt);
@@ -108,8 +129,11 @@ public class RegistroUsuariosGraf extends javax.swing.JFrame {
         });
         getContentPane().add(registrarUsuarioBot, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 440, 160, 40));
 
+        botonVolver.setBackground(new java.awt.Color(255, 255, 255));
         botonVolver.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        botonVolver.setForeground(new java.awt.Color(0, 0, 0));
         botonVolver.setText("Volver");
+        botonVolver.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         botonVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonVolverActionPerformed(evt);
@@ -118,22 +142,30 @@ public class RegistroUsuariosGraf extends javax.swing.JFrame {
         getContentPane().add(botonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 520, 160, 30));
 
         jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() | java.awt.Font.BOLD, jLabel3.getFont().getSize()+11));
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Inactivar Usuario");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 120, -1, -1));
 
+        inactivarUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        inactivarUsuario.setForeground(new java.awt.Color(0, 0, 0));
+        inactivarUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         inactivarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inactivarUsuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(inactivarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 310, 175, -1));
+        getContentPane().add(inactivarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 290, 170, -1));
 
         jLabel4.setFont(jLabel4.getFont().deriveFont(jLabel4.getFont().getSize()+5f));
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Nombre de Usuario");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 230, -1, 22));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 230, 160, 22));
 
+        inactivatBot.setBackground(new java.awt.Color(255, 255, 255));
         inactivatBot.setFont(inactivatBot.getFont().deriveFont(inactivatBot.getFont().getSize()+3f));
+        inactivatBot.setForeground(new java.awt.Color(0, 0, 0));
         inactivatBot.setText("Inactivar");
+        inactivatBot.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         inactivatBot.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inactivatBotActionPerformed(evt);
@@ -141,10 +173,12 @@ public class RegistroUsuariosGraf extends javax.swing.JFrame {
         });
         getContentPane().add(inactivatBot, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 440, 140, 40));
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-////////////////////////////////////////////////////////////////////////////////
     // TextField de nombre
     private void nombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreUsuarioActionPerformed
        // TODO add your handling code here:
@@ -332,6 +366,7 @@ public class RegistroUsuariosGraf extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel labelApellidosUsuario;
     private javax.swing.JLabel labelContUsuario;
     private javax.swing.JLabel labelNicknameUsuario;

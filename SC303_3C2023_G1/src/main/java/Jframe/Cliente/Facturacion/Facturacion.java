@@ -54,8 +54,10 @@ public class Facturacion extends javax.swing.JFrame {
         TicketsjTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         AtraccionesjLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(1000, 600));
         setMinimumSize(new java.awt.Dimension(1000, 600));
         setPreferredSize(new java.awt.Dimension(1000, 600));
@@ -105,71 +107,95 @@ public class Facturacion extends javax.swing.JFrame {
         getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 370, 260));
 
         AtraccionesjLabel.setFont(AtraccionesjLabel.getFont().deriveFont(AtraccionesjLabel.getFont().getStyle() | java.awt.Font.BOLD, AtraccionesjLabel.getFont().getSize()+11));
+        AtraccionesjLabel.setForeground(new java.awt.Color(0, 0, 0));
         AtraccionesjLabel.setText("Total");
         getContentPane().add(AtraccionesjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 190, -1, -1));
 
+        VolverAInicioDeSesionjButton.setBackground(new java.awt.Color(255, 255, 255));
         VolverAInicioDeSesionjButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        VolverAInicioDeSesionjButton.setForeground(new java.awt.Color(0, 0, 0));
         VolverAInicioDeSesionjButton.setText("Volver a inicio");
+        VolverAInicioDeSesionjButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         VolverAInicioDeSesionjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VolverAInicioDeSesionjButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(VolverAInicioDeSesionjButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 540, 160, 20));
+        getContentPane().add(VolverAInicioDeSesionjButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 530, 190, -1));
 
         GenerarFacturajLabel.setFont(GenerarFacturajLabel.getFont().deriveFont(GenerarFacturajLabel.getFont().getSize()+11f));
+        GenerarFacturajLabel.setForeground(new java.awt.Color(0, 0, 0));
         GenerarFacturajLabel.setText("Generar Factura");
         getContentPane().add(GenerarFacturajLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 430, -1, -1));
 
         AtraccionjLabel.setFont(AtraccionjLabel.getFont().deriveFont(AtraccionjLabel.getFont().getSize()+5f));
+        AtraccionjLabel.setForeground(new java.awt.Color(0, 0, 0));
         AtraccionjLabel.setText("Ingrese la atraccion");
-        getContentPane().add(AtraccionjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 500, -1, -1));
+        getContentPane().add(AtraccionjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 480, -1, -1));
 
         TicketsjLabel.setFont(TicketsjLabel.getFont().deriveFont(TicketsjLabel.getFont().getSize()+5f));
+        TicketsjLabel.setForeground(new java.awt.Color(0, 0, 0));
         TicketsjLabel.setText("Veces de Uso");
-        getContentPane().add(TicketsjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 493, -1, 30));
+        getContentPane().add(TicketsjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 480, -1, 30));
 
+        AtraccionjTextField.setBackground(new java.awt.Color(255, 255, 255));
+        AtraccionjTextField.setForeground(new java.awt.Color(0, 0, 0));
+        AtraccionjTextField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         AtraccionjTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AtraccionjTextFieldActionPerformed(evt);
             }
         });
-        getContentPane().add(AtraccionjTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 500, 184, -1));
+        getContentPane().add(AtraccionjTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 184, -1));
 
         total.setEditable(false);
+        total.setBackground(new java.awt.Color(255, 255, 255));
+        total.setForeground(new java.awt.Color(0, 0, 0));
+        total.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         total.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 totalActionPerformed(evt);
             }
         });
-        getContentPane().add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 240, 200, -1));
+        getContentPane().add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 240, 200, -1));
 
+        irAPagar.setBackground(new java.awt.Color(255, 255, 255));
         irAPagar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        irAPagar.setForeground(new java.awt.Color(0, 0, 0));
         irAPagar.setText("Agregar");
+        irAPagar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         irAPagar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 irAPagarActionPerformed(evt);
             }
         });
-        getContentPane().add(irAPagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 550, -1, -1));
+        getContentPane().add(irAPagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 520, 140, 30));
 
         AtraccionesjLabel1.setFont(AtraccionesjLabel1.getFont().deriveFont(AtraccionesjLabel1.getFont().getStyle() | java.awt.Font.BOLD, AtraccionesjLabel1.getFont().getSize()+19));
+        AtraccionesjLabel1.setForeground(new java.awt.Color(0, 0, 0));
         AtraccionesjLabel1.setText("Facturacion");
-        getContentPane().add(AtraccionesjLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
+        getContentPane().add(AtraccionesjLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, -1));
 
         AtraccionesjLabel2.setFont(AtraccionesjLabel2.getFont().deriveFont(AtraccionesjLabel2.getFont().getStyle() | java.awt.Font.BOLD, AtraccionesjLabel2.getFont().getSize()+11));
+        AtraccionesjLabel2.setForeground(new java.awt.Color(0, 0, 0));
         AtraccionesjLabel2.setText("Factura");
         getContentPane().add(AtraccionesjLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, 50));
 
+        TicketsjTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        TicketsjTextField1.setForeground(new java.awt.Color(0, 0, 0));
+        TicketsjTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         TicketsjTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TicketsjTextField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(TicketsjTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 500, 200, 20));
+        getContentPane().add(TicketsjTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 510, 200, 20));
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Ir a Pagar");
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -178,8 +204,12 @@ public class Facturacion extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 310, 150, 30));
 
         AtraccionesjLabel3.setFont(AtraccionesjLabel3.getFont().deriveFont(AtraccionesjLabel3.getFont().getStyle() | java.awt.Font.BOLD, AtraccionesjLabel3.getFont().getSize()+11));
+        AtraccionesjLabel3.setForeground(new java.awt.Color(0, 0, 0));
         AtraccionesjLabel3.setText("Atracciones Disponibles");
         getContentPane().add(AtraccionesjLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -391,6 +421,7 @@ public class Facturacion extends javax.swing.JFrame {
     private javax.swing.JButton VolverAInicioDeSesionjButton;
     private javax.swing.JButton irAPagar;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;

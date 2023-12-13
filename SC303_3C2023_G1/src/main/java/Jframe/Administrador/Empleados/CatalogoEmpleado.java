@@ -61,11 +61,10 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
         labelTelefono4 = new javax.swing.JLabel();
         limpiarEspacios = new javax.swing.JButton();
         labelTelefono6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1000, 600));
         setMinimumSize(new java.awt.Dimension(1000, 600));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -95,6 +94,9 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 160, 360, 370));
 
+        telefonoEmpleado.setBackground(new java.awt.Color(255, 255, 255));
+        telefonoEmpleado.setForeground(new java.awt.Color(0, 0, 0));
+        telefonoEmpleado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         telefonoEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 telefonoEmpleadoActionPerformed(evt);
@@ -103,9 +105,13 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
         getContentPane().add(telefonoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 223, -1));
 
         labelTelefono.setFont(labelTelefono.getFont().deriveFont(labelTelefono.getFont().getSize()+5f));
+        labelTelefono.setForeground(new java.awt.Color(0, 0, 0));
         labelTelefono.setText("Teléfono");
         getContentPane().add(labelTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
 
+        emailEmpleado.setBackground(new java.awt.Color(255, 255, 255));
+        emailEmpleado.setForeground(new java.awt.Color(0, 0, 0));
+        emailEmpleado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         emailEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailEmpleadoActionPerformed(evt);
@@ -114,18 +120,25 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
         getContentPane().add(emailEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, 223, -1));
 
         labelEmaill.setFont(labelEmaill.getFont().deriveFont(labelEmaill.getFont().getSize()+5f));
+        labelEmaill.setForeground(new java.awt.Color(0, 0, 0));
         labelEmaill.setText("Correo Electronico");
         getContentPane().add(labelEmaill, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, -1, -1));
 
+        registrarEmpleado.setBackground(new java.awt.Color(255, 255, 255));
         registrarEmpleado.setFont(registrarEmpleado.getFont().deriveFont(registrarEmpleado.getFont().getSize()+3f));
+        registrarEmpleado.setForeground(new java.awt.Color(0, 0, 0));
         registrarEmpleado.setText("Registrar Empleado");
+        registrarEmpleado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         registrarEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 registrarEmpleadoActionPerformed(evt);
             }
         });
-        getContentPane().add(registrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, -1, -1));
+        getContentPane().add(registrarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 430, -1, 30));
 
+        nombre.setBackground(new java.awt.Color(255, 255, 255));
+        nombre.setForeground(new java.awt.Color(0, 0, 0));
+        nombre.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreActionPerformed(evt);
@@ -134,9 +147,13 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
         getContentPane().add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 223, -1));
 
         labelNombre.setFont(labelNombre.getFont().deriveFont(labelNombre.getFont().getSize()+5f));
+        labelNombre.setForeground(new java.awt.Color(0, 0, 0));
         labelNombre.setText("Nombre");
         getContentPane().add(labelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
+        apellidosEmpleado.setBackground(new java.awt.Color(255, 255, 255));
+        apellidosEmpleado.setForeground(new java.awt.Color(0, 0, 0));
+        apellidosEmpleado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         apellidosEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 apellidosEmpleadoActionPerformed(evt);
@@ -145,9 +162,13 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
         getContentPane().add(apellidosEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 190, 223, -1));
 
         labelApellidos.setFont(labelApellidos.getFont().deriveFont(labelApellidos.getFont().getSize()+5f));
+        labelApellidos.setForeground(new java.awt.Color(0, 0, 0));
         labelApellidos.setText("Apellidos");
         getContentPane().add(labelApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, -1, -1));
 
+        cuidadEmpleado.setBackground(new java.awt.Color(255, 255, 255));
+        cuidadEmpleado.setForeground(new java.awt.Color(0, 0, 0));
+        cuidadEmpleado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         cuidadEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cuidadEmpleadoActionPerformed(evt);
@@ -156,9 +177,13 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
         getContentPane().add(cuidadEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 223, -1));
 
         labelCuidad.setFont(labelCuidad.getFont().deriveFont(labelCuidad.getFont().getSize()+5f));
+        labelCuidad.setForeground(new java.awt.Color(0, 0, 0));
         labelCuidad.setText("Cuidad");
         getContentPane().add(labelCuidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
 
+        direccionEmpleado.setBackground(new java.awt.Color(255, 255, 255));
+        direccionEmpleado.setForeground(new java.awt.Color(0, 0, 0));
+        direccionEmpleado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         direccionEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 direccionEmpleadoActionPerformed(evt);
@@ -167,11 +192,15 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
         getContentPane().add(direccionEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 223, -1));
 
         labelDireccion.setFont(labelDireccion.getFont().deriveFont(labelDireccion.getFont().getSize()+5f));
+        labelDireccion.setForeground(new java.awt.Color(0, 0, 0));
         labelDireccion.setText("Dirección");
         getContentPane().add(labelDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, -1, -1));
 
+        volverACatalogo.setBackground(new java.awt.Color(255, 255, 255));
         volverACatalogo.setFont(volverACatalogo.getFont().deriveFont(volverACatalogo.getFont().getSize()+5f));
+        volverACatalogo.setForeground(new java.awt.Color(0, 0, 0));
         volverACatalogo.setText("Volver a Catalogo");
+        volverACatalogo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         volverACatalogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 volverACatalogoActionPerformed(evt);
@@ -180,11 +209,15 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
         getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 560, -1, -1));
 
         labelTelefono1.setFont(labelTelefono1.getFont().deriveFont(labelTelefono1.getFont().getSize()+11f));
+        labelTelefono1.setForeground(new java.awt.Color(0, 0, 0));
         labelTelefono1.setText("Editar e Inactivar Empleado ->");
         getContentPane().add(labelTelefono1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, -1, -1));
 
+        editarEmpleado.setBackground(new java.awt.Color(255, 255, 255));
         editarEmpleado.setFont(editarEmpleado.getFont().deriveFont(editarEmpleado.getFont().getSize()+3f));
+        editarEmpleado.setForeground(new java.awt.Color(0, 0, 0));
         editarEmpleado.setText("Editar");
+        editarEmpleado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         editarEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editarEmpleadoActionPerformed(evt);
@@ -193,25 +226,34 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
         getContentPane().add(editarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 520, 160, 30));
 
         labelTelefono3.setFont(labelTelefono3.getFont().deriveFont(labelTelefono3.getFont().getSize()+11f));
+        labelTelefono3.setForeground(new java.awt.Color(0, 0, 0));
         labelTelefono3.setText("Agregar Nuevo Empleado");
         getContentPane().add(labelTelefono3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, -1, -1));
 
         labelTelefono4.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
+        labelTelefono4.setForeground(new java.awt.Color(0, 0, 0));
         labelTelefono4.setText("Catalogo Empleado");
-        getContentPane().add(labelTelefono4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, -1, -1));
+        getContentPane().add(labelTelefono4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
 
+        limpiarEspacios.setBackground(new java.awt.Color(255, 255, 255));
         limpiarEspacios.setFont(limpiarEspacios.getFont().deriveFont(limpiarEspacios.getFont().getSize()+3f));
+        limpiarEspacios.setForeground(new java.awt.Color(0, 0, 0));
         limpiarEspacios.setText("Limpiar");
+        limpiarEspacios.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         limpiarEspacios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 limpiarEspaciosActionPerformed(evt);
             }
         });
-        getContentPane().add(limpiarEspacios, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 160, -1));
+        getContentPane().add(limpiarEspacios, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 160, 30));
 
         labelTelefono6.setFont(labelTelefono6.getFont().deriveFont(labelTelefono6.getFont().getSize()+11f));
+        labelTelefono6.setForeground(new java.awt.Color(0, 0, 0));
         labelTelefono6.setText("Lista Empleado");
         getContentPane().add(labelTelefono6, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 110, -1, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -519,6 +561,7 @@ public class CatalogoEmpleado extends javax.swing.JFrame {
     private javax.swing.JTextField direccionEmpleado;
     private javax.swing.JButton editarEmpleado;
     private javax.swing.JTextField emailEmpleado;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JLabel labelApellidos;

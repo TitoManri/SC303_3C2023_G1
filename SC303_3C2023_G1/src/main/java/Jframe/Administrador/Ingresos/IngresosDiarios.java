@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Jframe.Administrador.Ingresos;
+import Jframe.Administrador.Catalogos;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -44,17 +45,17 @@ public class IngresosDiarios extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         totalTexto = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1000, 600));
         setMinimumSize(new java.awt.Dimension(1000, 600));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 360, -1));
 
         jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getStyle() | java.awt.Font.BOLD, jLabel1.getFont().getSize()+19));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Total ->");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, -1, 50));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -83,8 +84,11 @@ public class IngresosDiarios extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 380, 310));
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(jButton1.getFont().deriveFont(jButton1.getFont().getSize()+5f));
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Actualizar Tabla");
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -93,27 +97,44 @@ public class IngresosDiarios extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 330, 180, -1));
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 102, 102));
         jLabel2.setText("Formato:  yyyy-mm-dd");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, -1, 20));
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Ingrese el dia");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
 
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(jButton2.getFont().deriveFont(jButton2.getFont().getSize()+5f));
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Volver ");
+        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, 150, -1));
 
         jLabel4.setFont(jLabel4.getFont().deriveFont(jLabel4.getFont().getStyle() | java.awt.Font.BOLD, jLabel4.getFont().getSize()+19));
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Ingresos");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, -1, -1));
 
+        totalTexto.setBackground(new java.awt.Color(255, 255, 255));
+        totalTexto.setForeground(new java.awt.Color(0, 0, 0));
+        totalTexto.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         totalTexto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 totalTextoActionPerformed(evt);
             }
         });
         getContentPane().add(totalTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 510, 350, 30));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -125,6 +146,14 @@ public class IngresosDiarios extends javax.swing.JFrame {
     private void totalTextoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalTextoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_totalTextoActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       Catalogos inicio2 = new Catalogos();
+        inicio2.setVisible(true);
+        inicio2.pack();
+        inicio2.setLocationRelativeTo(null); 
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
     private void buscarIngresosPorFecha() {
         modeloTabla.setRowCount(0);
         totalTexto.setText(""); 
@@ -194,6 +223,7 @@ public class IngresosDiarios extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;

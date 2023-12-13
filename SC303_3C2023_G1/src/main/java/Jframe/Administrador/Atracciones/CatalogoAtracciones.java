@@ -61,7 +61,6 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         volverACatalogo = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         editarAtraccion = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -70,6 +69,7 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         empleadosTabla = new javax.swing.JTable();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximizedBounds(new java.awt.Rectangle(0, 0, 0, 0));
@@ -102,7 +102,11 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 120, 220, -1));
 
+        limpiar.setBackground(new java.awt.Color(255, 255, 255));
+        limpiar.setFont(limpiar.getFont().deriveFont(limpiar.getFont().getSize()+5f));
+        limpiar.setForeground(new java.awt.Color(0, 0, 0));
         limpiar.setText("Limpiar");
+        limpiar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         limpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 limpiarActionPerformed(evt);
@@ -118,10 +122,12 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
         getContentPane().add(nombreAtraccionTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 190, -1));
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Nombre Atraccion");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Empleado");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, -1, -1));
 
@@ -132,40 +138,50 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
         });
         getContentPane().add(categoriasTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 180, 20));
 
+        agregarAtraccionBoton.setBackground(new java.awt.Color(255, 255, 255));
+        agregarAtraccionBoton.setFont(agregarAtraccionBoton.getFont().deriveFont(agregarAtraccionBoton.getFont().getSize()+5f));
+        agregarAtraccionBoton.setForeground(new java.awt.Color(0, 0, 0));
         agregarAtraccionBoton.setText("Agregar Atraccion");
+        agregarAtraccionBoton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         agregarAtraccionBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 agregarAtraccionBotonActionPerformed(evt);
             }
         });
-        getContentPane().add(agregarAtraccionBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, 150, 30));
+        getContentPane().add(agregarAtraccionBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 190, 30));
 
         jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Categoria");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, -1, 20));
 
         jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getSize()+9f));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Categorias");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 80, -1, -1));
 
+        volverACatalogo.setBackground(new java.awt.Color(255, 255, 255));
         volverACatalogo.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        volverACatalogo.setForeground(new java.awt.Color(0, 0, 0));
         volverACatalogo.setText("Volver a Catalogo");
+        volverACatalogo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         volverACatalogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 volverACatalogoActionPerformed(evt);
             }
         });
-        getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, -1, -1));
+        getContentPane().add(volverACatalogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, 190, -1));
 
         jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel2.setText("Editar e Inactivar Atraccion");
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Editar e Inactivar Atraccion ->");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
 
-        jLabel6.setFont(new java.awt.Font("Helvetica Neue", 0, 28)); // NOI18N
-        jLabel6.setText("->");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, -1, -1));
-
+        editarAtraccion.setBackground(new java.awt.Color(255, 255, 255));
+        editarAtraccion.setFont(editarAtraccion.getFont().deriveFont(editarAtraccion.getFont().getSize()+5f));
+        editarAtraccion.setForeground(new java.awt.Color(0, 0, 0));
         editarAtraccion.setText("Editar");
+        editarAtraccion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         editarAtraccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 editarAtraccionActionPerformed(evt);
@@ -174,10 +190,12 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
         getContentPane().add(editarAtraccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 420, 140, 30));
 
         jLabel7.setFont(jLabel7.getFont().deriveFont(jLabel7.getFont().getStyle() | java.awt.Font.BOLD, jLabel7.getFont().getSize()+19));
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Catalogo Atracciones");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
 
         jLabel8.setFont(jLabel8.getFont().deriveFont(jLabel8.getFont().getSize()+9f));
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Empleados Disponibles");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, -1, 20));
 
@@ -196,6 +214,7 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
         getContentPane().add(precioEnTicketesTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 190, -1));
 
         jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Precio en ticketes ");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
 
@@ -225,6 +244,9 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
         }
 
         getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 120, 220, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/blanco.jpg"))); // NOI18N
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -544,11 +566,11 @@ public class CatalogoAtracciones extends javax.swing.JFrame {
     private javax.swing.JTextField empleadoTexto;
     private javax.swing.JTable empleadosTabla;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

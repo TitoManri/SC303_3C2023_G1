@@ -2,7 +2,11 @@ package Jframe.IniciodeSesionYRegistro;
 
 import Personas.RegistroUsuarios;
 import Personas.Usuario;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.LinkedList;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Dennys
@@ -20,21 +24,7 @@ public class Inicio2 extends javax.swing.JFrame {
         this.registroUsuarios = registroUsuarios;
     }
 
-    private boolean autenticarUsuario(String nickname, String password) {
-    // Obtener la lista de usuarios del registro
-    LinkedList<Usuario> usuarios = registroUsuarios.getUsuarios();
 
-    // Iterar sobre la lista de usuarios para buscar coincidencias
-    for (Usuario usuario : usuarios) {
-        if (usuario.getNickname().equals(nickname) && usuario.getPassword().equals(password) && usuario.estaActivo()) {
-            // El usuario ha sido autenticado exitosamente
-            return true;
-        }
-    }
-
-    // El usuario no fue autenticado
-    return false;
-}
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -49,50 +39,71 @@ public class Inicio2 extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        iniciarSesion = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        volver = new javax.swing.JButton();
+        iniciarSesion1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1000, 600));
         setMinimumSize(new java.awt.Dimension(1000, 600));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
         setSize(new java.awt.Dimension(1000, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 216, -1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 216, -1));
 
+        jPasswordField1.setBackground(new java.awt.Color(255, 255, 255));
+        jPasswordField1.setForeground(new java.awt.Color(0, 0, 0));
+        jPasswordField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 216, -1));
+        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 310, 216, -1));
 
-        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getSize()+5f));
-        jLabel1.setText("Nombre de Usuario ->");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, -1, -1));
+        jLabel1.setFont(jLabel1.getFont().deriveFont(jLabel1.getFont().getSize()+11f));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Nombre de Usuario ");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        jLabel2.setText("Contraseña ->");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, -1, -1));
+        jLabel2.setFont(jLabel2.getFont().deriveFont(jLabel2.getFont().getSize()+11f));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Contraseña ");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 240, -1, -1));
 
-        iniciarSesion.setFont(new java.awt.Font("sansserif", 0, 18)); // NOI18N
-        iniciarSesion.setText("Iniciar Sesion");
-        iniciarSesion.addActionListener(new java.awt.event.ActionListener() {
+        volver.setBackground(new java.awt.Color(255, 255, 255));
+        volver.setFont(volver.getFont().deriveFont(volver.getFont().getSize()+5f));
+        volver.setForeground(new java.awt.Color(0, 0, 0));
+        volver.setText("Volver");
+        volver.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        volver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                iniciarSesionActionPerformed(evt);
+                volverActionPerformed(evt);
             }
         });
-        getContentPane().add(iniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, 190, 40));
+        getContentPane().add(volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 540, 230, 30));
 
-        jLabel3.setFont(jLabel3.getFont().deriveFont(jLabel3.getFont().getStyle() | java.awt.Font.BOLD, jLabel3.getFont().getSize()+17));
-        jLabel3.setText("Inicio de Sesion");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, -1, -1));
+        iniciarSesion1.setBackground(new java.awt.Color(255, 255, 255));
+        iniciarSesion1.setFont(iniciarSesion1.getFont().deriveFont(iniciarSesion1.getFont().getSize()+5f));
+        iniciarSesion1.setForeground(new java.awt.Color(0, 0, 0));
+        iniciarSesion1.setText("Iniciar Sesion");
+        iniciarSesion1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        iniciarSesion1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iniciarSesion1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(iniciarSesion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, 190, 40));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/inicioDeSesion.png"))); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -105,18 +116,49 @@ public class Inicio2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
-    private void iniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSesionActionPerformed
+    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
         
-        InicioDeSesion iniciodesesion = new InicioDeSesion();
+        Inicio iniciodesesion = new Inicio();
          iniciodesesion.setVisible(true);
             iniciodesesion.pack();
             iniciodesesion.setLocationRelativeTo(null);
             this.dispose();  
-    }//GEN-LAST:event_iniciarSesionActionPerformed
+    }//GEN-LAST:event_volverActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void iniciarSesion1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSesion1ActionPerformed
+        
+        String username = jTextField1.getText();
+        String password = new String(jPasswordField1.getPassword());
+
+        if (autenticarUsuario(username, password)) {
+            InicioDeSesion iniciodesesion = new InicioDeSesion();
+            iniciodesesion.setVisible(true);
+            iniciodesesion.pack();
+            iniciodesesion.setLocationRelativeTo(null);
+            this.dispose(); 
+            
+        } else {
+            JOptionPane.showMessageDialog(null, "Error de autenticación. Verifica el nombre de usuario y la contraseña.");
+        }
+        
+        
+    }//GEN-LAST:event_iniciarSesion1ActionPerformed
+    
+    private boolean autenticarUsuario(String username, String password) {
+    try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/BaseDeDatos/Usuarios.txt"))) {
+        String line;
+        while ((line = br.readLine()) != null) {
+            String[] parts = line.split(",");
+            if (parts.length == 5 && parts[2].equals(username) && parts[3].equals(password) && parts[4].equals("true")) {
+                return true; 
+            }
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    return false; // Usuario no autenticado
+}
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -151,11 +193,12 @@ public class Inicio2 extends javax.swing.JFrame {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton iniciarSesion;
+    private javax.swing.JButton iniciarSesion1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }
